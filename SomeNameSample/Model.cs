@@ -1,11 +1,11 @@
-﻿using System;
-using SomeName;
+﻿using SomeName;
 
 namespace SomeNameSample
 {
     public class Model
     {
-        [Regular(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")]
+        [Required(ErrorMessage = "Email is required!")]
+        [Regular(Pattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")]
         public string Email { get; set; }
     }
 }

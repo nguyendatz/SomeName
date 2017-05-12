@@ -26,23 +26,25 @@ namespace SomeName
 
     public static class Helper
     {
-        public static ValidateResult IsValid<T>(this T obj)
+        public static ValidateResult IsValid<T>(this T obj) where T: class
         {
             var res = new ValidateResult();
             var properties = obj.GetType().GetProperties();
 
             foreach(var a in properties)
             {
-                var tmp = a.GetCustomAttributes(typeof(SomeName), true);
-                if (tmp.Length > 0)
+                var atts = a.GetCustomAttributes(typeof(SomeName), true);
+                res.IsValid = true;
+
+                foreach (SomeName att in atts)
                 {
-                    var att = (SomeName)tmp[0];
                     res.IsValid = att.IsValid(a.GetValue(obj));
 
-                    if(!res.IsValid)
+                    if (!res.IsValid)
                     {
                         var err = att.ErrorMessage ?? string.Format("The field {0} is not valid.", a.Name);
                         res.Error.Add(a.Name, err);
+                        break;
                     }
                 }
             }
