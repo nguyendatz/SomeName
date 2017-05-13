@@ -23,19 +23,9 @@ namespace SomeNameSample
             // Get data
             m.Email = txtEmail.Text;
 
-            var validateResult = m.IsValid();
-
-            if(validateResult.IsValid)
+            if(m.IsValid())
             {
-                MessageBox.Show("Sucess!");
-            }
-            else
-            {
-                // Show errors
-                foreach (var a in validateResult.Error)
-                {
-                    MessageBox.Show(a.Value);
-                }
+                // Do somethings
             }
         }
 

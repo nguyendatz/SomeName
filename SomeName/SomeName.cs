@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace SomeName
 {
@@ -24,7 +25,7 @@ namespace SomeName
 
     public static class Helper
     {
-        public static ValidateResult IsValid<T>(this T obj) where T: class
+        public static bool IsValid<T>(this T obj) where T: class
         {
             var res = new ValidateResult();
             var properties = obj.GetType().GetProperties();
@@ -47,7 +48,19 @@ namespace SomeName
                 }
             }
 
-            return res;
+            if (res.IsValid)
+            {
+                MessageBox.Show("Sucess!");
+            }
+            else
+            {
+                foreach (var a in res.Error)
+                {
+                    MessageBox.Show(a.Value);
+                }
+            }
+
+            return res.IsValid;
         }
     }
 }
