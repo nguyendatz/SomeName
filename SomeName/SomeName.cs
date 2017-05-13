@@ -8,8 +8,6 @@ namespace SomeName
         public abstract bool IsValid(object input);
 
         public string ErrorMessage { get; set; }
-
-        public object Pattern { get; set; }
     }
 
     public class ValidateResult

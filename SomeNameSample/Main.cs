@@ -38,5 +38,10 @@ namespace SomeNameSample
                 }
             }
         }
+
+        public bool EmailExists(object input)
+        {
+            return input.ToString() != "abc@def.com";
+        }
     }
 }
