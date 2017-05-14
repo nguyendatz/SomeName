@@ -11,9 +11,9 @@ namespace SomeName
 
         private Form Form { get; set; }
 
-        public CustomAttribute()
+        public CustomAttribute(string FormName = null)
         {
-            Form = Application.OpenForms[0];
+            Form = FormName == null ? Application.OpenForms[0] : Application.OpenForms[FormName];
         }
 
         public override bool IsValid(object input)
