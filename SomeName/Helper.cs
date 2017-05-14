@@ -4,7 +4,15 @@ namespace SomeName
 {
     public static class Helper
     {
-        public static bool IsValid<T>(this T obj) where T : class
+        public static bool IsValid<T>(this T obj, MessageType type = MessageType.MessageBox) where T : class
+        {
+            var res = Validate(obj);
+            ShowError(res, type);
+
+            return res.IsValid;
+        }
+
+        public static ValidateResult Validate<T>(T obj)
         {
             var res = new ValidateResult();
             var properties = obj.GetType().GetProperties();
@@ -27,19 +35,30 @@ namespace SomeName
                 }
             }
 
-            if (res.IsValid)
-            {
-                MessageBox.Show("Sucess!");
-            }
-            else
-            {
-                foreach (var a in res.Error)
-                {
-                    MessageBox.Show(a.Value);
-                }
-            }
+            return res;
+        }
 
-            return res.IsValid;
+        private static void ShowError(ValidateResult res, MessageType type)
+        {
+            switch (type)
+            {
+                case MessageType.MessageBox:
+                    if (res.IsValid)
+                    {
+                        MessageBox.Show("Sucess!");
+                    }
+                    else
+                    {
+                        foreach (var a in res.Error)
+                        {
+                            MessageBox.Show(a.Value);
+                        }
+                    }
+                    break;
+
+                default:
+                    break;
+            }
         }
     }
 }
