@@ -29,9 +29,9 @@ namespace SomeNameSample
             }
         }
 
-        public bool EmailExists(object input)
+        public bool EmailExists(object input, object[] Params)
         {
-            return input.ToString() != "abc@def.com";
+            return input.ToString() != Params[0].ToString();
         }
     }
 }

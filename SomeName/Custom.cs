@@ -7,6 +7,8 @@ namespace SomeName
     {
         public string Method { get; set; }
 
+        public object[] Params { get; set; }
+
         private Form Form { get; set; }
 
         public CustomAttribute()
@@ -19,10 +21,11 @@ namespace SomeName
             var res = false;
             try
             {
-                var tmp = Form.GetType().GetMethod(Method).Invoke(Form, new[] { input });
+                var obj = Params == null ? new[] { input } : new[] { input, Params };
+                var tmp = Form.GetType().GetMethod(Method).Invoke(Form, obj);
                 bool.TryParse(tmp.ToString(), out res);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
