@@ -16,7 +16,7 @@ namespace SomeName
             Form = FormName == null ? Application.OpenForms[0] : Application.OpenForms[FormName];
         }
 
-        public override bool IsValid(object input)
+        public override bool IsValid(object[] input)
         {
             var res = false;
             try

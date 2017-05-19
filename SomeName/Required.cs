@@ -2,9 +2,9 @@
 {
     public class RequiredAttribute : SomeName
     {
-        public override bool IsValid(object input)
+        public override bool IsValid(object[] input)
         {
-            var sInput = input.ToString().Trim();
+            var sInput = input[0].ToString().Trim();
             return !string.IsNullOrEmpty(sInput);
         }
     }

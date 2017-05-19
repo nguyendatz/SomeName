@@ -41,14 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compare.cs" />
+    <Compile Include="CompareValidation.cs" />
     <Compile Include="Custom.cs" />
     <Compile Include="Enum.cs" />
+    <Compile Include="EqualCompareValidation.cs" />
+    <Compile Include="GreaterThanCompareValidation.cs" />
+    <Compile Include="GreaterThanEqualCompareValidation.cs" />
     <Compile Include="Helper.cs" />
+    <Compile Include="LessThanCompareValidation.cs" />
+    <Compile Include="LessThanEqualCompareValidation.cs" />
+    <Compile Include="NotEqualCompareValidation.cs" />
     <Compile Include="Required.cs" />
     <Compile Include="Regular.cs" />
     <Compile Include="SomeName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidateResult.cs" />
+    <Compile Include="Validation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MainDiagram.cd" />

@@ -24,7 +24,19 @@ namespace SomeName
 
                 foreach (SomeName att in atts)
                 {
-                    res.IsValid = att.IsValid(a.GetValue(obj));
+                    if (att.ToString() == "SomeName.CompareAttribute")
+                    {
+                        foreach (var b in properties)
+                        {
+                            if (((CompareAttribute)att).CompareTo == b.Name)
+                            {
+                                res.IsValid = att.IsValid(new object[] { a.GetValue(obj), b.GetValue(obj) });
+                                break;
+                            }
+                        }
+                    }
+                    else
+                        res.IsValid = att.IsValid(new object[] { a.GetValue(obj) } );
 
                     if (!res.IsValid)
                     {
