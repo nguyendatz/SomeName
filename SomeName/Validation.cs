@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SomeName
 {
-    interface Validation
+    abstract public class Validation
     {
-        bool isValid();
+        abstract public bool isValid();
     }
 }

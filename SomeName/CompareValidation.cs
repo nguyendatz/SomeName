@@ -73,7 +73,7 @@ namespace SomeName
             }
         }
 
-        public bool isValid()
+        public override bool isValid()
         {
             return this.SoSanh();
         }
