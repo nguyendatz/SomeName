@@ -22,8 +22,9 @@ namespace SomeNameSample
 
             // Get data
             m.Email = txtEmail.Text;
+            m.RepeatEmail = txtRepeatEmail.Text;
 
-            if(m.IsValid())
+            if (m.IsValid())
             {
                 // Do somethings
             }

@@ -31,11 +31,13 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtRepeatEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(212, 98);
+            this.btnSubmit.Location = new System.Drawing.Point(212, 227);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 0;
@@ -59,11 +61,29 @@
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Email";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(58, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Repeat Email";
+            // 
+            // txtRepeatEmail
+            // 
+            this.txtRepeatEmail.Location = new System.Drawing.Point(58, 107);
+            this.txtRepeatEmail.Name = "txtRepeatEmail";
+            this.txtRepeatEmail.Size = new System.Drawing.Size(229, 20);
+            this.txtRepeatEmail.TabIndex = 4;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 262);
+            this.Controls.Add(this.txtRepeatEmail);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnSubmit);
@@ -80,6 +100,8 @@
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtRepeatEmail;
     }
 }
 
