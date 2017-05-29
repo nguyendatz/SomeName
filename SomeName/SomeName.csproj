@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AndValidationGroup.cs" />
     <Compile Include="Compare.cs" />
     <Compile Include="CompareValidation.cs" />
     <Compile Include="Custom.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="LessThanCompareValidation.cs" />
     <Compile Include="LessThanEqualCompareValidation.cs" />
     <Compile Include="NotEqualCompareValidation.cs" />
+    <Compile Include="OrValidationGroup.cs" />
     <Compile Include="RangeValidation.cs" />
     <Compile Include="Required.cs" />
     <Compile Include="Regular.cs" />
@@ -62,6 +64,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidateResult.cs" />
     <Compile Include="Validation.cs" />
+    <Compile Include="ValidationGroup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagramV1.cd" />
