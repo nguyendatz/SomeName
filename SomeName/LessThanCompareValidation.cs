@@ -24,6 +24,8 @@ namespace SomeName
                     return (double)_input1 < (double)_input2;
                 case DataType.Integer:
                     return (int)_input1 < (int)_input2;
+                case DataType.DateTime:
+                    return (DateTime)_input1 < (DateTime)_input2;
                 case DataType.String:
                     return false;
                 default:

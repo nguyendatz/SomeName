@@ -20,6 +20,7 @@
         Integer,
         Double,
         String,
-        Char
+        Char,
+        DateTime
     }
 }

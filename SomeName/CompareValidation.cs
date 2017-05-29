@@ -52,7 +52,7 @@ namespace SomeName
 
         protected CompareValidation() { }
 
-        public static CompareValidation Create(object input1, object input2, Comparison CType, DataType DType)
+        public static Validation Create(object input1, object input2, Comparison CType, DataType DType)
         {
             switch (CType)
             {

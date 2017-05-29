@@ -44,14 +44,18 @@
     <Compile Include="Compare.cs" />
     <Compile Include="CompareValidation.cs" />
     <Compile Include="Custom.cs" />
+    <Compile Include="DateTimeRangeValidation.cs" />
+    <Compile Include="DoubleRangeValidation.cs" />
     <Compile Include="Enum.cs" />
     <Compile Include="EqualCompareValidation.cs" />
     <Compile Include="GreaterThanCompareValidation.cs" />
     <Compile Include="GreaterThanEqualCompareValidation.cs" />
     <Compile Include="Helper.cs" />
+    <Compile Include="IntegerRangeValidation.cs" />
     <Compile Include="LessThanCompareValidation.cs" />
     <Compile Include="LessThanEqualCompareValidation.cs" />
     <Compile Include="NotEqualCompareValidation.cs" />
+    <Compile Include="RangeValidation.cs" />
     <Compile Include="Required.cs" />
     <Compile Include="Regular.cs" />
     <Compile Include="SomeName.cs" />
@@ -60,8 +64,7 @@
     <Compile Include="Validation.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagramV1.cd" />
     <None Include="MainDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
