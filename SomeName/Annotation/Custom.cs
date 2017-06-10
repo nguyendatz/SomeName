@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace SomeName.Attribute
+namespace SomeName.Annotation
 {
     public class CustomAttribute : SomeName
     {

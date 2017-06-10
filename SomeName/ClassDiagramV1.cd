@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="SomeName.Attribute.CompareAttribute" Collapsed="true">
+  <Class Name="SomeName.Annotation.CompareAttribute" Collapsed="true">
     <Position X="3.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABAAAAAAAQAAAgAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
-      <FileName>Attribute\Compare.cs</FileName>
+      <FileName>Annotation\Compare.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SomeName.Validation.CompareValidation">
@@ -14,11 +14,11 @@
       <FileName>Validation\CompareValidation.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Attribute.CustomAttribute" Collapsed="true">
+  <Class Name="SomeName.Annotation.CustomAttribute" Collapsed="true">
     <Position X="5.75" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAAAAAAAAAAggAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
-      <FileName>Attribute\Custom.cs</FileName>
+      <FileName>Annotation\Custom.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SomeName.Validation.EqualCompareValidation">
@@ -71,25 +71,25 @@
       <FileName>Validation\NotEqualCompareValidation.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Attribute.RegularAttribute" Collapsed="true">
+  <Class Name="SomeName.Annotation.RegularAttribute" Collapsed="true">
     <Position X="8" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Attribute\Regular.cs</FileName>
+      <FileName>Annotation\Regular.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Attribute.RequiredAttribute" Collapsed="true">
+  <Class Name="SomeName.Annotation.RequiredAttribute" Collapsed="true">
     <Position X="10.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Attribute\Required.cs</FileName>
+      <FileName>Annotation\Required.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.SomeName" Collapsed="true">
+  <Class Name="SomeName.Annotation.SomeName" Collapsed="true">
     <Position X="6.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Attribute\SomeName.cs</FileName>
+      <FileName>Annotation\SomeName.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SomeName.ValidateResult" Collapsed="true">

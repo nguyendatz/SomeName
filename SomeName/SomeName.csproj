@@ -42,9 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AndValidationGroup.cs" />
-    <Compile Include="Attribute\Compare.cs" />
+    <Compile Include="Annotation\Compare.cs" />
     <Compile Include="Validation\CompareValidation.cs" />
-    <Compile Include="Attribute\Custom.cs" />
+    <Compile Include="Annotation\Custom.cs" />
     <Compile Include="Validation\DateTimeRangeValidation.cs" />
     <Compile Include="Validation\DoubleRangeValidation.cs" />
     <Compile Include="Enum.cs" />
@@ -58,9 +58,9 @@
     <Compile Include="Validation\NotEqualCompareValidation.cs" />
     <Compile Include="OrValidationGroup.cs" />
     <Compile Include="Validation\RangeValidation.cs" />
-    <Compile Include="Attribute\Required.cs" />
-    <Compile Include="Attribute\Regular.cs" />
-    <Compile Include="Attribute\SomeName.cs" />
+    <Compile Include="Annotation\Required.cs" />
+    <Compile Include="Annotation\Regular.cs" />
+    <Compile Include="Annotation\SomeName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidateResult.cs" />
     <Compile Include="Validation\Validation.cs" />

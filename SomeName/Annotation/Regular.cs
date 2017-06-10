@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace SomeName.Attribute
+namespace SomeName.Annotation
 {
     public class RegularAttribute : SomeName
     {

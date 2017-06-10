@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SomeName
+namespace SomeName.Annotation
 {
     public abstract class SomeName: Attribute
     {

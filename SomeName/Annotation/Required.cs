@@ -1,4 +1,4 @@
-﻿namespace SomeName.Attribute
+﻿namespace SomeName.Annotation
 {
     public class RequiredAttribute : SomeName
     {
