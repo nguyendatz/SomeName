@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SomeName
+namespace SomeName.Validation
 {
-    class NotEqualCompareValidation : CompareValidation
+    class LessThanCompareValidation : CompareValidation
     {
-        public NotEqualCompareValidation(object input1, object input2, DataType DType)
+        public LessThanCompareValidation(object input1, object input2, DataType DType)
         {
             _input1 = input1;
             _input2 = input2;
@@ -19,15 +19,15 @@ namespace SomeName
             switch (_DType)
             {
                 case DataType.Char:
-                    return (char)_input1 != (char)_input2;
+                    return (char)_input1 < (char)_input2;
                 case DataType.Double:
-                    return (double)_input1 != (double)_input2;
+                    return (double)_input1 < (double)_input2;
                 case DataType.Integer:
-                    return (int)_input1 != (int)_input2;
-                case DataType.String:
-                    return (string)_input1 != (string)_input2;
+                    return (int)_input1 < (int)_input2;
                 case DataType.DateTime:
-                    return (DateTime)_input1 != (DateTime)_input2;
+                    return (DateTime)_input1 < (DateTime)_input2;
+                case DataType.String:
+                    return false;
                 default:
                     return false;
             }
