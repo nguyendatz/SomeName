@@ -25,7 +25,7 @@ namespace SomeName.Util
 
                 foreach (SomeNameAttribute att in atts)
                 {
-                    if (att.ToString() == "SomeName.CompareAttribute")
+                    if (att.ToString() == "SomeName.Annotation.CompareAttribute")
                     {
                         foreach (var b in properties)
                         {

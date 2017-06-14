@@ -47,18 +47,16 @@
     <Compile Include="Processor\NormalProcessor.cs" />
     <Compile Include="Validator\CompareValidator.cs" />
     <Compile Include="Annotation\Custom.cs" />
+    <Compile Include="Validator\CompareValidatorFactory.cs" />
+    <Compile Include="Validator\DateTimeCompareValidator.cs" />
     <Compile Include="Validator\DateTimeRangeValidator.cs" />
+    <Compile Include="Validator\DoubleCompareValidator.cs" />
     <Compile Include="Validator\DoubleRangeValidator.cs" />
     <Compile Include="Util\Enum.cs" />
-    <Compile Include="Validator\EqualCompareValidator.cs" />
-    <Compile Include="Validator\GreaterThanCompareValidator.cs" />
-    <Compile Include="Validator\GreaterThanEqualCompareValidator.cs" />
     <Compile Include="Util\Helper.cs" />
+    <Compile Include="Validator\IntegerCompareValidator.cs" />
     <Compile Include="Validator\IntegerRangeValidator.cs" />
     <Compile Include="Validator\IValidator.cs" />
-    <Compile Include="Validator\LessThanCompareValidator.cs" />
-    <Compile Include="Validator\LessThanEqualCompareValidator.cs" />
-    <Compile Include="Validator\NotEqualCompareValidator.cs" />
     <Compile Include="Group\OrValidationGroup.cs" />
     <Compile Include="Validator\RangeValidator.cs" />
     <Compile Include="Annotation\Required.cs" />
@@ -66,12 +64,12 @@
     <Compile Include="Annotation\SomeName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationResult.cs" />
+    <Compile Include="Validator\StringCompareValidator.cs" />
     <Compile Include="Validator\Validation.cs" />
     <Compile Include="Group\ValidationGroup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagramV1.cd" />
-    <None Include="MainDiagram.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

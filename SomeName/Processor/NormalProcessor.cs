@@ -10,9 +10,9 @@ namespace SomeName.Processor
     /// <summary>
     /// Process operator in added order
     /// </summary>
-    public class NormalProcessor : IProcessor
+    public class NormalProcessor<T> : IProcessor<T>
     {
-        private List<IValidator<object>> validatorList = new List<IValidator<object>>();
+        private List<IValidator> validatorList = new List<IValidator>();
         private ValidationResult result = new ValidationResult();
 
         public ValidationResult Result()
@@ -20,22 +20,22 @@ namespace SomeName.Processor
             return result;
         }
 
-        public IProcessor DoValidate()
+        IProcessor<T> IProcessor<T>.DoValidate()
         {
-            bool isValid = true;
-            foreach (IValidator<object> validator in validatorList)
+            /*bool isValid = true;
+            foreach (IValidator<T> validator in validatorList)
             {
-                isValid = isValid && validator.Validate();
+                isValid = isValid && validator.isValid(null);
             }
+
             result.IsValid = isValid;
-            result.AddError("gg", "wp");
+            result.AddError("gg", "wp");*/
+
             return this;
         }
 
-
-        public IProcessor On<T>(T value, IValidator<T> validator)
+        public IProcessor<T> On(T value, IValidator validator)
         {
-            validator.Value = value;
             validatorList.Add(validator);
             return this;
         }

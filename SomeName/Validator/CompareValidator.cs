@@ -7,78 +7,69 @@ using System.Threading.Tasks;
 
 namespace SomeName.Validator
 {
-    public abstract class CompareValidator : Validation
+    public abstract class CompareValidator<T> : IValidator
     {
-        protected object _input1;
-        protected object _input2;
-        protected DataType _DType;
-        public object Input1
+        private T _Input;
+        private Comparison _cType;
+
+        public T Input
         {
             get
             {
-                return _input1;
+                return _Input;
             }
 
             set
             {
-                _input1 = value;
+                _Input = value;
             }
         }
 
-        public object Input2
+        public Comparison CType
         {
             get
             {
-                return _input2;
+                return _cType;
             }
 
             set
             {
-                _input2 = value;
+                _cType = value;
             }
         }
 
-        protected DataType DType
+        protected CompareValidator(T input, Comparison CType)
         {
-            get
-            {
-                return _DType;
-            }
-
-            set
-            {
-                _DType = value;
-            }
+            _Input = input;
+            _cType = CType;
         }
 
-        protected CompareValidator() { }
-
-        public static Validation Create(object input1, object input2, Comparison CType, DataType DType)
+        public override bool isValid<type>(type other)
         {
-            switch (CType)
+            switch(CType)
             {
                 case Comparison.Equal:
-                    return new EqualCompareValidator(input1, input2, DType);
-                case Comparison.NotEqual:
-                    return new NotEqualCompareValidator(input1, input2, DType);
+                    return this.Equal(other);
                 case Comparison.GreaterThan:
-                    return new GreaterThanCompareValidator(input1, input2, DType);
+                    return this.GreaterThan(other);
                 case Comparison.GreaterThanEqual:
-                    return new GreaterThanEqualCompareValidator(input1, input2, DType);
+                    return this.GreaterThanEqual(other);
                 case Comparison.LessThan:
-                    return new LessThanCompareValidator(input1, input2, DType);
+                    return this.LessThan(other);
                 case Comparison.LessThanEqual:
-                    return new LessThanEqualCompareValidator(input1, input2, DType);
+                    return this.LessThanEqual(other);
+                case Comparison.NotEqual:
+                    return this.NotEqual(other);
                 default:
-                    return new EqualCompareValidator(input1, input2, DType);
+                    return false;
             }
         }
 
-        public override bool isValid()
-        {
-            return this.SoSanh();
-        }
-
-        abstract protected bool SoSanh();
+        abstract protected bool Equal(object other);
+        abstract protected bool GreaterThan(object other);
+        abstract protected bool GreaterThanEqual(object other);
+        abstract protected bool LessThan(object other);
+        abstract protected bool LessThanEqual(object other);
+        abstract protected bool NotEqual(object other);
     }
 }

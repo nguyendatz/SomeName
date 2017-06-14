@@ -19,8 +19,8 @@
     {
         Integer,
         Double,
-        String,
         Char,
+        String,
         DateTime
     }
 }

@@ -13,11 +13,9 @@ namespace SomeName.Validator
             
         }
 
-        public override int Compare(double a, double b)
+        protected override bool Compare(object input)
         {
-            if (a < b) return -1;
-            else if (a > b) return 1;
-            else return 0;
+            return Min <= (double)input && (double)input < Max;
         }
     }
 }

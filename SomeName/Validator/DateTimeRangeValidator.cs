@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace SomeName.Validator
 {
-    class DateTimeRangeValidator : RangeValidator
+    class DateTimeRangeValidator : RangeValidator<DateTime>
     {
-        public DateTimeRangeValidator(object input, object min, object max) : base(input, min, max)
+        public DateTimeRangeValidator(DateTime min, DateTime max) : base(min, max)
         {
+
         }
 
-        protected override bool SoSanh()
+        protected override bool Compare(object input)
         {
-            return (DateTime)_min <= (DateTime)_input && (DateTime)_input < (DateTime)_max;
+            return Min <= (DateTime)input && (DateTime)input < Max;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace SomeNameTest
         [TestMethod]
         public void DoValidate_DoubleRangeValidator_IsValid()
         {
-            IProcessor processor = new NormalProcessor();
+            IProcessor<double> processor = new NormalProcessor<double>();
             ValidationResult result = processor.On(12, new DoubleRangeValidator(1.0, 13.3))
                 .DoValidate()
                 .Result();

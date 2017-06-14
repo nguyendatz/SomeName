@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace SomeName.Validator
 {
-    class IntegerRangeValidator: RangeValidator
+    class IntegerRangeValidator : RangeValidator<int>
     {
-        public IntegerRangeValidator(object input, object min, object max) : base(input, min, max)
+        public IntegerRangeValidator(int min, int max) : base(min, max)
         {
+
         }
 
-        protected override bool SoSanh()
+        protected override bool Compare(object input)
         {
-            return (int)_min <= (int)_input && (int)_input < (int)_max;
+            return Min <= (int)input && (int)input < Max;
         }
     }
 }

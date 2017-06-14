@@ -16,8 +16,8 @@ namespace SomeName.Annotation
 
         public override bool IsValid(object[] Input)
         {
-            Validation cv = CompareValidator.Create(Input[0], Input[1], ComparisonType, Type);
-            return cv.isValid();
+            IValidator cv = CompareValidatorFactory.Create<string>((string)Input[0], ComparisonType, Type);
+            return cv.isValid((string)Input[1]);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace SomeName.Processor
     /// after that, we can get the result of the validation
     /// </summary>
     /// <typeparam name="TResult">Type of validation result, this can be any type (string, ValidateResult, integer, ...)</typeparam>
-    public interface IProcessor
+    public interface IProcessor<T>
     {
         /// <summary>
         /// Validation result, can be any posible type
@@ -23,7 +23,7 @@ namespace SomeName.Processor
         /// Process validation on validation batch
         /// </summary>
         /// <returns>Validation processor</returns>
-        IProcessor DoValidate();
+        IProcessor<T> DoValidate();
 
         /// <summary>
         /// Add a validator on a value to validation batch
@@ -32,6 +32,6 @@ namespace SomeName.Processor
         /// <param name="value">The value we wish to validate</param>
         /// <param name="validator">Validator to perform validation on target value</param>
         /// <returns>Validation processor</returns>
-        IProcessor On<T>(T value, IValidator validator);
+        IProcessor<T> On(T value, IValidator validator);
     }
 }

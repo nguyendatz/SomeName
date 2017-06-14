@@ -8,7 +8,7 @@ namespace SomeName.Validator
 {
     public abstract class Validation
     {
-        protected List<ValidationGroup> _ValidationGroupList;
+        /*protected List<ValidationGroup> _ValidationGroupList;
 
         public void attach(ValidationGroup vg)
         {
@@ -18,7 +18,7 @@ namespace SomeName.Validator
         public void detach(ValidationGroup vg)
         {
             _ValidationGroupList.Remove(vg);
-        }
+        }*/
 
         abstract public bool isValid();
     }

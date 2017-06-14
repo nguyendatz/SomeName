@@ -7,31 +7,22 @@ using System.Threading.Tasks;
 
 namespace SomeName.Validator
 {
-    public abstract class RangeValidator<TValue> : IValidator<TValue>
+    public abstract class RangeValidator<T> : IValidator
     {
-        public TValue Value { get; set; }
+        protected T Min { get; set; }
+        protected T Max { get; set; }
 
-        public TValue Min { get; set; }
-        public TValue Max { get; set; }
-
-        public RangeValidator(TValue min, TValue max)
+        public RangeValidator(T min, T max)
         {
             Min = min;
             Max = max;
         }
 
-        public bool Validate()
+        override public bool isValid<type>(type input)
         {
-            if (Compare(Value, Min) >= 0 && Compare(Value, Max) <= 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return Compare(input);
         }
 
-        public abstract int Compare(TValue a, TValue b);
+        protected abstract bool Compare(object input);
     }
 }

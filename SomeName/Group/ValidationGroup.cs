@@ -7,25 +7,40 @@ using SomeName.Validator;
 
 namespace SomeName
 {
-    abstract public class ValidationGroup
+    abstract public class ValidationGroup<T>
     {
-        protected List<Validation> _list;
+        protected List<IValidator> _list;
+        protected T _input;
 
-        public ValidationGroup()
+        protected T Input
         {
-            _list = new List<Validation>();
+            get
+            {
+                return _input;
+            }
+
+            set
+            {
+                _input = value;
+            }
         }
 
-        public void add(Validation v)
+        public ValidationGroup(T input)
+        {
+            _input = input;
+            _list = new List<IValidator>();
+        }
+
+        public void add(IValidator v)
         {
             _list.Add(v);
         }
 
-        public void remove(Validation v)
+        public void remove(IValidator v)
         {
             _list.Remove(v);
         }
 
-        abstract public bool isValid();
+        protected abstract bool isValid();
     }
 }
