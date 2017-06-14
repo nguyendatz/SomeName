@@ -7,11 +7,11 @@
       <FileName>Annotation\Compare.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Validation.CompareValidation">
+  <Class Name="SomeName.Validator.CompareValidator">
     <Position X="31.25" Y="3.25" Width="5.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAEAAAAEAAAAkAAQAAAAA=</HashCode>
-      <FileName>Validation\CompareValidation.cs</FileName>
+      <FileName>Validator\CompareValidator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SomeName.Annotation.CustomAttribute" Collapsed="true">
@@ -21,54 +21,54 @@
       <FileName>Annotation\Custom.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Validation.EqualCompareValidation">
+  <Class Name="SomeName.Validator.EqualCompareValidator">
     <Position X="28.5" Y="13" Width="4.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Validation\EqualCompareValidation.cs</FileName>
+      <FileName>Validator\EqualCompareValidator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Validation.GreaterThanCompareValidation">
+  <Class Name="SomeName.Validator.GreaterThanCompareValidator">
     <Position X="34.5" Y="7.5" Width="5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Validation\GreaterThanCompareValidation.cs</FileName>
+      <FileName>Validator\GreaterThanCompareValidator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Validation.GreaterThanEqualCompareValidation">
+  <Class Name="SomeName.Validator.GreaterThanEqualCompareValidator">
     <Position X="34.25" Y="13" Width="5.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Validation\GreaterThanEqualCompareValidation.cs</FileName>
+      <FileName>Validator\GreaterThanEqualCompareValidator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Helper" Collapsed="true">
+  <Class Name="SomeName.Util.Helper" Collapsed="true">
     <Position X="41.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Helper.cs</FileName>
+      <FileName>Util\Helper.cs</FileName>
       <NewMemberFileName>SomeName.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Validation.LessThanCompareValidation">
+  <Class Name="SomeName.Validator.LessThanCompareValidator">
     <Position X="28.5" Y="10.25" Width="5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Validation\LessThanCompareValidation.cs</FileName>
+      <FileName>Validator\LessThanCompareValidator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Validation.LessThanEqualCompareValidation">
+  <Class Name="SomeName.Validator.LessThanEqualCompareValidator">
     <Position X="28.5" Y="7.5" Width="5.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Validation\LessThanEqualCompareValidation.cs</FileName>
+      <FileName>Validator\LessThanEqualCompareValidator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Validation.NotEqualCompareValidation">
+  <Class Name="SomeName.Validator.NotEqualCompareValidator">
     <Position X="34.5" Y="10.25" Width="5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Validation\NotEqualCompareValidation.cs</FileName>
+      <FileName>Validator\NotEqualCompareValidator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SomeName.Annotation.RegularAttribute" Collapsed="true">
@@ -85,95 +85,89 @@
       <FileName>Annotation\Required.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Annotation.SomeName" Collapsed="true">
+  <Class Name="SomeName.Annotation.SomeNameAttribute" Collapsed="true">
     <Position X="6.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Annotation\SomeName.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.ValidateResult" Collapsed="true">
-    <Position X="40" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAQAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ValidateResult.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SomeName.Validation.Validation">
+  <Class Name="SomeName.Validator.Validation">
     <Position X="26.5" Y="0.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAACAAAAAAAAAAAAAAAAACAAAAAAAAAABA=</HashCode>
-      <FileName>Validation\Validation.cs</FileName>
+      <FileName>Validator\Validation.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Validation.DateTimeRangeValidation">
+  <Class Name="SomeName.Validator.DateTimeRangeValidator">
     <Position X="12.25" Y="7.5" Width="4.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Validation\DateTimeRangeValidation.cs</FileName>
+      <FileName>Validator\DateTimeRangeValidator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Validation.DoubleRangeValidation">
+  <Class Name="SomeName.Validator.DoubleRangeValidator">
     <Position X="17.25" Y="7.5" Width="4" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Validation\DoubleRangeValidation.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Validator\DoubleRangeValidator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Validation.IntegerRangeValidation">
+  <Class Name="SomeName.Validator.IntegerRangeValidator">
     <Position X="22" Y="7.5" Width="4" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Validation\IntegerRangeValidation.cs</FileName>
+      <FileName>Validator\IntegerRangeValidator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomeName.Validation.RangeValidation">
+  <Class Name="SomeName.Validator.RangeValidator&lt;TValue&gt;">
     <Position X="16.75" Y="3.25" Width="4.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABIACAAAEAAAAAAAEAAAAEAAEABAAAAAAAA=</HashCode>
-      <FileName>Validation\RangeValidation.cs</FileName>
+      <HashCode>AAAAAAAAABCAAAAAEAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>Validator\RangeValidator.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SomeName.AndValidationGroup">
     <Position X="11" Y="4.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>AndValidationGroup.cs</FileName>
+      <FileName>Group\AndValidationGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SomeName.OrValidationGroup">
     <Position X="13.25" Y="4.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>OrValidationGroup.cs</FileName>
+      <FileName>Group\OrValidationGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SomeName.ValidationGroup">
     <Position X="12.25" Y="1.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAEAAAAAAAAAAAAAAAAQAAAAAACAAA=</HashCode>
-      <FileName>ValidationGroup.cs</FileName>
+      <FileName>Group\ValidationGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="SomeName.MessageType" Collapsed="true">
+  <Enum Name="SomeName.Util.MessageType" Collapsed="true">
     <Position X="40" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Enum.cs</FileName>
+      <FileName>Util\Enum.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="SomeName.Comparison" Collapsed="true">
+  <Enum Name="SomeName.Util.Comparison" Collapsed="true">
     <Position X="40" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAAAgAAAAAAAgIAAAAAAAAAAAAAAAAAAAAQAACA=</HashCode>
-      <FileName>Enum.cs</FileName>
+      <FileName>Util\Enum.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="SomeName.DataType" Collapsed="true">
+  <Enum Name="SomeName.Util.DataType" Collapsed="true">
     <Position X="41.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAACAiQAAAAAAAAAAAA=</HashCode>
-      <FileName>Enum.cs</FileName>
+      <FileName>Util\Enum.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

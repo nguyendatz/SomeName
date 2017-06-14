@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SomeName.Validation
+namespace SomeName.Validator
 {
-    abstract public class Validation
+    public abstract class Validation
     {
         protected List<ValidationGroup> _ValidationGroupList;
 

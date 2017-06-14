@@ -2,7 +2,7 @@
 
 namespace SomeName.Annotation
 {
-    public abstract class SomeName: Attribute
+    public abstract class SomeNameAttribute: Attribute
     {
         public abstract bool IsValid(object[] input);
 

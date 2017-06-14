@@ -2,7 +2,7 @@
 
 namespace SomeName.Annotation
 {
-    public class RegularAttribute : SomeName
+    public class RegularAttribute : SomeNameAttribute
     {
         public string Pattern { get; set; }
 

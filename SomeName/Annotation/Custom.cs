@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace SomeName.Annotation
 {
-    public class CustomAttribute : SomeName
+    public class CustomAttribute : SomeNameAttribute
     {
         public string Method { get; set; }
 

@@ -1,12 +1,13 @@
-﻿using System;
+﻿using SomeName.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SomeName.Validation
+namespace SomeName.Validator
 {
-    public abstract class CompareValidation : Validation
+    public abstract class CompareValidator : Validation
     {
         protected object _input1;
         protected object _input2;
@@ -50,26 +51,26 @@ namespace SomeName.Validation
             }
         }
 
-        protected CompareValidation() { }
+        protected CompareValidator() { }
 
         public static Validation Create(object input1, object input2, Comparison CType, DataType DType)
         {
             switch (CType)
             {
                 case Comparison.Equal:
-                    return new EqualCompareValidation(input1, input2, DType);
+                    return new EqualCompareValidator(input1, input2, DType);
                 case Comparison.NotEqual:
-                    return new NotEqualCompareValidation(input1, input2, DType);
+                    return new NotEqualCompareValidator(input1, input2, DType);
                 case Comparison.GreaterThan:
-                    return new GreaterThanCompareValidation(input1, input2, DType);
+                    return new GreaterThanCompareValidator(input1, input2, DType);
                 case Comparison.GreaterThanEqual:
-                    return new GreaterThanEqualCompareValidation(input1, input2, DType);
+                    return new GreaterThanEqualCompareValidator(input1, input2, DType);
                 case Comparison.LessThan:
-                    return new LessThanCompareValidation(input1, input2, DType);
+                    return new LessThanCompareValidator(input1, input2, DType);
                 case Comparison.LessThanEqual:
-                    return new LessThanEqualCompareValidation(input1, input2, DType);
+                    return new LessThanEqualCompareValidator(input1, input2, DType);
                 default:
-                    return new EqualCompareValidation(input1, input2, DType);
+                    return new EqualCompareValidator(input1, input2, DType);
             }
         }
 

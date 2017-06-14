@@ -41,30 +41,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AndValidationGroup.cs" />
+    <Compile Include="Group\AndValidationGroup.cs" />
     <Compile Include="Annotation\Compare.cs" />
-    <Compile Include="Validation\CompareValidation.cs" />
+    <Compile Include="Processor\IProcessor.cs" />
+    <Compile Include="Processor\NormalProcessor.cs" />
+    <Compile Include="Validator\CompareValidator.cs" />
     <Compile Include="Annotation\Custom.cs" />
-    <Compile Include="Validation\DateTimeRangeValidation.cs" />
-    <Compile Include="Validation\DoubleRangeValidation.cs" />
-    <Compile Include="Enum.cs" />
-    <Compile Include="Validation\EqualCompareValidation.cs" />
-    <Compile Include="Validation\GreaterThanCompareValidation.cs" />
-    <Compile Include="Validation\GreaterThanEqualCompareValidation.cs" />
-    <Compile Include="Helper.cs" />
-    <Compile Include="Validation\IntegerRangeValidation.cs" />
-    <Compile Include="Validation\LessThanCompareValidation.cs" />
-    <Compile Include="Validation\LessThanEqualCompareValidation.cs" />
-    <Compile Include="Validation\NotEqualCompareValidation.cs" />
-    <Compile Include="OrValidationGroup.cs" />
-    <Compile Include="Validation\RangeValidation.cs" />
+    <Compile Include="Validator\DateTimeRangeValidator.cs" />
+    <Compile Include="Validator\DoubleRangeValidator.cs" />
+    <Compile Include="Util\Enum.cs" />
+    <Compile Include="Validator\EqualCompareValidator.cs" />
+    <Compile Include="Validator\GreaterThanCompareValidator.cs" />
+    <Compile Include="Validator\GreaterThanEqualCompareValidator.cs" />
+    <Compile Include="Util\Helper.cs" />
+    <Compile Include="Validator\IntegerRangeValidator.cs" />
+    <Compile Include="Validator\IValidator.cs" />
+    <Compile Include="Validator\LessThanCompareValidator.cs" />
+    <Compile Include="Validator\LessThanEqualCompareValidator.cs" />
+    <Compile Include="Validator\NotEqualCompareValidator.cs" />
+    <Compile Include="Group\OrValidationGroup.cs" />
+    <Compile Include="Validator\RangeValidator.cs" />
     <Compile Include="Annotation\Required.cs" />
     <Compile Include="Annotation\Regular.cs" />
     <Compile Include="Annotation\SomeName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValidateResult.cs" />
-    <Compile Include="Validation\Validation.cs" />
-    <Compile Include="ValidationGroup.cs" />
+    <Compile Include="ValidationResult.cs" />
+    <Compile Include="Validator\Validation.cs" />
+    <Compile Include="Group\ValidationGroup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagramV1.cd" />

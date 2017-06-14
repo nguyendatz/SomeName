@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SomeName.Validation
+namespace SomeName.Validator
 {
-    class IntegerRangeValidation: RangeValidation
+    class IntegerRangeValidator: RangeValidator
     {
-        public IntegerRangeValidation(object input, object min, object max) : base(input, min, max)
+        public IntegerRangeValidator(object input, object min, object max) : base(input, min, max)
         {
         }
 

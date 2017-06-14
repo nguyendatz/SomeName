@@ -1,6 +1,6 @@
 ﻿namespace SomeName.Annotation
 {
-    public class RequiredAttribute : SomeName
+    public class RequiredAttribute : SomeNameAttribute
     {
         public override bool IsValid(object[] input)
         {

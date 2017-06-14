@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SomeName.Util;
+using SomeName.Validator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SomeName.Annotation
 {
-    public class CompareAttribute : SomeName
+    public class CompareAttribute : SomeNameAttribute
     {
         public string CompareTo { get; set; }
         public Comparison ComparisonType { get; set; }
@@ -14,7 +16,7 @@ namespace SomeName.Annotation
 
         public override bool IsValid(object[] Input)
         {
-            Validation cv = CompareValidation.Create(Input[0], Input[1], ComparisonType, Type);
+            Validation cv = CompareValidator.Create(Input[0], Input[1], ComparisonType, Type);
             return cv.isValid();
         }
     }

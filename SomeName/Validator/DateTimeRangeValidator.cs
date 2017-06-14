@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SomeName.Validation
+namespace SomeName.Validator
 {
-    class DateTimeRangeValidation : RangeValidation
+    class DateTimeRangeValidator : RangeValidator
     {
-        public DateTimeRangeValidation(object input, object min, object max) : base(input, min, max)
+        public DateTimeRangeValidator(object input, object min, object max) : base(input, min, max)
         {
         }
 
