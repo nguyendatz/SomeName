@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SomeName.Validator
 {
-    class DoubleCompareValidator : CompareValidator<double>
+    public class DoubleCompareValidator : CompareValidator<double>
     {
         public DoubleCompareValidator(object input, Comparison CType): base((double)input, CType)
         {

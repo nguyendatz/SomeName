@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SomeName.Validator
 {
-    class IntegerRangeValidator : RangeValidator<int>
+    public class IntegerRangeValidator : RangeValidator<int>
     {
         public IntegerRangeValidator(int min, int max) : base(min, max)
         {

@@ -10,7 +10,6 @@ namespace SomeName.Validator
     {
         public DoubleRangeValidator(double min, double max) : base(min, max)
         {
-            
         }
 
         protected override bool Compare(object input)

@@ -16,9 +16,22 @@ namespace SomeName
 
         public bool IsValid { get; set; }
 
+        public ValidationResult()
+        {
+            IsValid = true;
+        }
+
         public void AddError(string name, string message)
         {
             this.errors.Add(name, message);
+            IsValid = false;
+        }
+
+        public string GetError(string name)
+        {
+            string value = null;
+            errors.TryGetValue(name, out value);
+            return value;
         }
     }
 }

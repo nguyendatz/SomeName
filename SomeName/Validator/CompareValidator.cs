@@ -44,7 +44,7 @@ namespace SomeName.Validator
             _cType = CType;
         }
 
-        public override bool isValid<type>(type other)
+        public override bool IsValid<type>(type other)
         {
             switch(CType)
             {

@@ -12,32 +12,45 @@ namespace SomeName.Processor
     /// </summary>
     public class NormalProcessor<T> : IProcessor<T>
     {
-        private List<IValidator> validatorList = new List<IValidator>();
+        private List<Tuple<T, IValidator, string>> validatorList = new List<Tuple<T, IValidator, string>>();
         private ValidationResult result = new ValidationResult();
+        private int propsCount;
+
+        public NormalProcessor()
+        {
+            propsCount = 0;
+        }
 
         public ValidationResult Result()
         {
             return result;
         }
 
-        IProcessor<T> IProcessor<T>.DoValidate()
+        public IProcessor<T> DoValidate()
         {
-            /*bool isValid = true;
-            foreach (IValidator<T> validator in validatorList)
+            foreach (Tuple<T, IValidator, string> tuple in validatorList)
             {
-                isValid = isValid && validator.isValid(null);
+                T value = tuple.Item1;
+                IValidator validator = tuple.Item2;
+
+                if (!validator.IsValid(value))
+                {
+                    string propertyName = tuple.Item3;
+                    result.AddError(propertyName, validator.DefaultMessage);
+                }
             }
-
-            result.IsValid = isValid;
-            result.AddError("gg", "wp");*/
-
             return this;
         }
 
-        public IProcessor<T> On(T value, IValidator validator)
+        public IProcessor<T> On(T value, IValidator validator, string propertyName)
         {
-            validatorList.Add(validator);
+            validatorList.Add(new Tuple<T, IValidator, string>(value, validator, getPropertyName(propertyName)));
             return this;
+        }
+
+        private string getPropertyName(string propertyName)
+        {
+            return propertyName == "prop" ? propertyName + propsCount++ : propertyName;
         }
     }
 }

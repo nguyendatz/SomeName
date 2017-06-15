@@ -20,6 +20,8 @@ namespace SomeName.Validator
             _ValidatorGroupList.Remove(vg);
         }*/
 
-        abstract public bool isValid<T>(T input);
+        public String DefaultMessage { get; set; }
+
+        abstract public bool IsValid<T>(T input);
     }
 }

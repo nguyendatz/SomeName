@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SomeName.Validator
 {
-    class DateTimeRangeValidator : RangeValidator<DateTime>
+    public class DateTimeRangeValidator : RangeValidator<DateTime>
     {
         public DateTimeRangeValidator(DateTime min, DateTime max) : base(min, max)
         {

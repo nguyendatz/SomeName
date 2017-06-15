@@ -16,9 +16,10 @@ namespace SomeName.Validator
         {
             Min = min;
             Max = max;
+            DefaultMessage = "Value must be in range [" + min + ", " + max + ")";
         }
 
-        override public bool isValid<type>(type input)
+        override public bool IsValid<type>(type input)
         {
             return Compare(input);
         }

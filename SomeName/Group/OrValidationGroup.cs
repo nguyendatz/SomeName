@@ -14,9 +14,9 @@ namespace SomeName
 
         protected override bool isValid()
         {
-            bool result = _list[0].isValid<T>(_input);
+            bool result = _list[0].IsValid<T>(_input);
             for (int i = 1; i < _list.Count; i++)
-                result = result || _list[i].isValid<T>(_input);
+                result = result || _list[i].IsValid<T>(_input);
             return result;
         }
     }

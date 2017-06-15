@@ -32,6 +32,6 @@ namespace SomeName.Processor
         /// <param name="value">The value we wish to validate</param>
         /// <param name="validator">Validator to perform validation on target value</param>
         /// <returns>Validation processor</returns>
-        IProcessor<T> On(T value, IValidator validator);
+        IProcessor<T> On(T value, IValidator validator, string propertyName = "prop");
     }
 }
