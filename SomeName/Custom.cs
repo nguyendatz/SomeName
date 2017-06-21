@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace SomeName
@@ -6,23 +7,21 @@ namespace SomeName
     public class CustomAttribute : SomeName
     {
         public string Method { get; set; }
+        public string Class { get; set; }
+        public string Library { get; set; }
 
         public object[] Params { get; set; }
-
-        private Form Form { get; set; }
-
-        public CustomAttribute(string FormName = null)
-        {
-            Form = FormName == null ? Application.OpenForms[0] : Application.OpenForms[FormName];
-        }
 
         public override bool IsValid(object[] input)
         {
             var res = false;
             try
             {
-                var obj = Params == null ? new[] { input } : new[] { input, Params };
-                var tmp = Form.GetType().GetMethod(Method).Invoke(Form, obj);
+                var obj = Params == null ? new[] { input[0] } : new[] { input[0], Params };
+               
+                Assembly a = Assembly.Load(Library);
+                var type = a.GetType(Class);
+                var tmp = type.GetMethod(Method).Invoke(null, obj);
                 bool.TryParse(tmp.ToString(), out res);
             }
             catch (Exception ex)

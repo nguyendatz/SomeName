@@ -55,6 +55,8 @@
     <Compile Include="IntegerRangeValidation.cs" />
     <Compile Include="LessThanCompareValidation.cs" />
     <Compile Include="LessThanEqualCompareValidation.cs" />
+    <Compile Include="MaxLengthAttribute.cs" />
+    <Compile Include="MinLengthAttribute.cs" />
     <Compile Include="NotEqualCompareValidation.cs" />
     <Compile Include="OrValidationGroup.cs" />
     <Compile Include="RangeValidation.cs" />
@@ -65,6 +67,7 @@
     <Compile Include="ValidateResult.cs" />
     <Compile Include="Validation.cs" />
     <Compile Include="ValidationGroup.cs" />
+    <Compile Include="Validator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagramV1.cd" />
