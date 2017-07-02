@@ -1,12 +1,9 @@
 ﻿using SomeName;
-using SomeName.Util;
-using SomeName.Annotation;
 
 namespace SomeNameSample
 {
     public class Model
     {
-<<<<<<< HEAD
         [Required(ErrorMessage ="Full name is required!")]
         public string FullName { get; set; }
 
@@ -17,8 +14,6 @@ namespace SomeNameSample
         [Required(ErrorMessage = "Email is required!")]
         [Regular(Pattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")]
         [Custom(Method = "EmailExists", Class = "SomeNameSample.Main", Library ="SomeNameSample", ErrorMessage = "This email already exists.", Params = new[] { "abc@def.com" })]
-=======
->>>>>>> hi
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Password is required!")]

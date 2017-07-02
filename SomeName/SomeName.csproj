@@ -41,36 +41,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Group\AndValidationGroup.cs" />
-    <Compile Include="Annotation\Compare.cs" />
-    <Compile Include="Processor\IProcessor.cs" />
-    <Compile Include="Processor\NormalProcessor.cs" />
-    <Compile Include="Validator\CompareValidator.cs" />
-    <Compile Include="Annotation\Custom.cs" />
-    <Compile Include="Validator\CompareValidatorFactory.cs" />
-    <Compile Include="Validator\DateTimeCompareValidator.cs" />
-    <Compile Include="Validator\DateTimeRangeValidator.cs" />
-    <Compile Include="Validator\DoubleCompareValidator.cs" />
-    <Compile Include="Validator\DoubleRangeValidator.cs" />
-    <Compile Include="Util\Enum.cs" />
-    <Compile Include="Util\Helper.cs" />
-    <Compile Include="Validator\IntegerCompareValidator.cs" />
-    <Compile Include="Validator\IntegerRangeValidator.cs" />
-    <Compile Include="Validator\IValidator.cs" />
-    <Compile Include="Group\OrValidationGroup.cs" />
-    <Compile Include="Validator\RangeValidator.cs" />
-    <Compile Include="Annotation\Required.cs" />
-    <Compile Include="Annotation\Regular.cs" />
-    <Compile Include="Annotation\SomeName.cs" />
+    <Compile Include="AndValidationGroup.cs" />
+    <Compile Include="Compare.cs" />
+    <Compile Include="CompareValidation.cs" />
+    <Compile Include="Custom.cs" />
+    <Compile Include="DateTimeRangeValidation.cs" />
+    <Compile Include="DoubleRangeValidation.cs" />
+    <Compile Include="Enum.cs" />
+    <Compile Include="EqualCompareValidation.cs" />
+    <Compile Include="GreaterThanCompareValidation.cs" />
+    <Compile Include="GreaterThanEqualCompareValidation.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="IntegerRangeValidation.cs" />
+    <Compile Include="LessThanCompareValidation.cs" />
+    <Compile Include="LessThanEqualCompareValidation.cs" />
+    <Compile Include="MaxLengthAttribute.cs" />
+    <Compile Include="MinLengthAttribute.cs" />
+    <Compile Include="NotEqualCompareValidation.cs" />
+    <Compile Include="OrValidationGroup.cs" />
+    <Compile Include="RangeValidation.cs" />
+    <Compile Include="Required.cs" />
+    <Compile Include="Regular.cs" />
+    <Compile Include="SomeName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValidationResult.cs" />
-    <Compile Include="Validator\StringCompareValidator.cs" />
-    <Compile Include="Validator\Validation.cs" />
-    <Compile Include="Group\ValidationGroup.cs" />
+    <Compile Include="ValidateResult.cs" />
+    <Compile Include="Validation.cs" />
+    <Compile Include="ValidationGroup.cs" />
+    <Compile Include="Validator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagramV1.cd" />
+    <None Include="MainDiagram.cd" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
