@@ -1,0 +1,17 @@
+C:\Users\jinich\Documents\Visual Studio 2015\Projects\SomeName\SomeNameTest\obj\Debug\SomeNameTest.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Design Patterns, Elements of Reusable Object-Oriented Software - Addison Wesley\Đồ án\SomeName\SomeNameTest\obj\Debug\SomeNameTest.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Design Patterns, Elements of Reusable Object-Oriented Software - Addison Wesley\Đồ án\SomeName\SomeNameTest\bin\Debug\SomeNameTest.dll
+C:\Users\user\Desktop\Design Patterns, Elements of Reusable Object-Oriented Software - Addison Wesley\Đồ án\SomeName\SomeNameTest\bin\Debug\SomeNameTest.pdb
+C:\Users\user\Desktop\Design Patterns, Elements of Reusable Object-Oriented Software - Addison Wesley\Đồ án\SomeName\SomeNameTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\user\Desktop\Design Patterns, Elements of Reusable Object-Oriented Software - Addison Wesley\Đồ án\SomeName\SomeNameTest\bin\Debug\SomeName.dll
+C:\Users\user\Desktop\Design Patterns, Elements of Reusable Object-Oriented Software - Addison Wesley\Đồ án\SomeName\SomeNameTest\bin\Debug\SomeName.pdb
+C:\Users\user\Desktop\Design Patterns, Elements of Reusable Object-Oriented Software - Addison Wesley\Đồ án\SomeName\SomeNameTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\user\Desktop\Design Patterns, Elements of Reusable Object-Oriented Software - Addison Wesley\Đồ án\SomeName\SomeNameTest\obj\Debug\SomeNameTest.dll
+C:\Users\user\Desktop\Design Patterns, Elements of Reusable Object-Oriented Software - Addison Wesley\Đồ án\SomeName\SomeNameTest\obj\Debug\SomeNameTest.pdb
+C:\Users\jinich\Documents\Visual Studio 2015\Projects\SomeName\SomeNameTest\bin\Debug\SomeNameTest.dll
+C:\Users\jinich\Documents\Visual Studio 2015\Projects\SomeName\SomeNameTest\bin\Debug\SomeNameTest.pdb
+C:\Users\jinich\Documents\Visual Studio 2015\Projects\SomeName\SomeNameTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\jinich\Documents\Visual Studio 2015\Projects\SomeName\SomeNameTest\bin\Debug\SomeName.dll
+C:\Users\jinich\Documents\Visual Studio 2015\Projects\SomeName\SomeNameTest\bin\Debug\SomeName.pdb
+C:\Users\jinich\Documents\Visual Studio 2015\Projects\SomeName\SomeNameTest\obj\Debug\SomeNameTest.dll
+C:\Users\jinich\Documents\Visual Studio 2015\Projects\SomeName\SomeNameTest\obj\Debug\SomeNameTest.pdb
