@@ -41,12 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Group\AndValidationGroup.cs" />
-    <Compile Include="Annotation\Compare.cs" />
+    <Compile Include="Annotation\MaxLengthAttribute.cs" />
+    <Compile Include="Annotation\MinLengthAttribute.cs" />
+    <Compile Include="Annotation\CompareAttribute.cs" />
+    <Compile Include="Processor\Context.cs" />
+    <Compile Include="Processor\DefaultProcessor.cs" />
     <Compile Include="Processor\IProcessor.cs" />
-    <Compile Include="Processor\NormalProcessor.cs" />
     <Compile Include="Validator\CompareValidator.cs" />
-    <Compile Include="Annotation\Custom.cs" />
     <Compile Include="Validator\CompareValidatorFactory.cs" />
     <Compile Include="Validator\DateTimeCompareValidator.cs" />
     <Compile Include="Validator\DateTimeRangeValidator.cs" />
@@ -57,20 +58,22 @@
     <Compile Include="Validator\IntegerCompareValidator.cs" />
     <Compile Include="Validator\IntegerRangeValidator.cs" />
     <Compile Include="Validator\IValidator.cs" />
-    <Compile Include="Group\OrValidationGroup.cs" />
+    <Compile Include="Processor\AnnotationProcessor.cs" />
     <Compile Include="Validator\RangeValidator.cs" />
-    <Compile Include="Annotation\Required.cs" />
-    <Compile Include="Annotation\Regular.cs" />
-    <Compile Include="Annotation\SomeName.cs" />
+    <Compile Include="Annotation\RequiredAttribute.cs" />
+    <Compile Include="Annotation\RegularAttribute.cs" />
+    <Compile Include="Annotation\SomeNameAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationResult.cs" />
+    <Compile Include="Validator\RequiredValidator.cs" />
     <Compile Include="Validator\StringCompareValidator.cs" />
-    <Compile Include="Validator\Validation.cs" />
-    <Compile Include="Group\ValidationGroup.cs" />
+    <Compile Include="Validator\ValidatorDecorator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagramV1.cd" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="TextFile1.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
