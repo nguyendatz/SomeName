@@ -8,13 +8,24 @@ namespace SomeName.Validator
 {
     public class DoubleRangeValidator : RangeValidator<double>
     {
+        private string errorMessage = "double range invalid";
+
         public DoubleRangeValidator(double min, double max) : base(min, max)
         {
         }
 
-        protected override bool Compare(object input)
+        public DoubleRangeValidator(double min, double max, IValidator<double> validator) : base(min, max, validator)
         {
-            return Min <= (double)input && (double)input < Max;
+        }
+
+        protected override bool Compare(double input)
+        {
+            return Min <= input && input < Max;
+        }
+
+        protected override string GetErrorMessage()
+        {
+            return errorMessage;
         }
     }
 }

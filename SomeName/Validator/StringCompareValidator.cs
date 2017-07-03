@@ -7,40 +7,51 @@ using System.Threading.Tasks;
 
 namespace SomeName.Validator
 {
-    class StringCompareValidator : CompareValidator<string>
+    public class StringCompareValidator : CompareValidator<string>
     {
-        public StringCompareValidator(object input, Comparison CType): base((string)input, CType)
+        private string errorMessage = "String compare invalid.";
+
+        public StringCompareValidator(string other, Comparison CType): base(other, CType)
         {
         }
 
-        protected override bool Equal(object other)
+        public StringCompareValidator(string other, Comparison CType, IValidator<string> validator) : base(other, CType, validator)
         {
-            return Input == (string)other;
         }
 
-        protected override bool GreaterThan(object other)
+        protected override bool Equal(string input)
+        {
+            return input == Other;
+        }
+
+        protected override string GetErrorMessage()
+        {
+            return errorMessage;
+        }
+
+        protected override bool GreaterThan(string input)
         {
             return false;
         }
 
-        protected override bool GreaterThanEqual(object other)
+        protected override bool GreaterThanEqual(string input)
         {
             return false;
         }
 
-        protected override bool LessThan(object other)
+        protected override bool LessThan(string input)
         {
             return false;
         }
 
-        protected override bool LessThanEqual(object other)
+        protected override bool LessThanEqual(string input)
         {
             return false;
         }
 
-        protected override bool NotEqual(object other)
+        protected override bool NotEqual(string input)
         {
-            return Input != (string)other;
+            return input != Other;
         }
     }
 }

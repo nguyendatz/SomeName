@@ -9,38 +9,50 @@ namespace SomeName.Validator
 {
     public class IntegerCompareValidator : CompareValidator<int>
     {
-        public IntegerCompareValidator(object input, Comparison CType): base((int)input, CType)
+        private string errorMessage = "Integer compare invalid.";
+
+        public IntegerCompareValidator(int other, Comparison CType): base(other, CType)
         {
         }
 
-        protected override bool Equal(object other)
+        public IntegerCompareValidator(int other, Comparison CType, IValidator<int> validator) : base(other, CType, validator)
         {
-            return Input == (int)other;
         }
 
-        protected override bool GreaterThan(object other)
+
+        protected override bool Equal(int input)
         {
-            return Input > (int)other;
+            return input == Other;
         }
 
-        protected override bool GreaterThanEqual(object other)
+        protected override string GetErrorMessage()
         {
-            return Input >= (int)other;
+            return errorMessage;
         }
 
-        protected override bool LessThan(object other)
+        protected override bool GreaterThan(int input)
         {
-            return Input < (int)other;
+            return input > Other;
         }
 
-        protected override bool LessThanEqual(object other)
+        protected override bool GreaterThanEqual(int input)
         {
-            return Input <= (int)other;
+            return input >= Other;
         }
 
-        protected override bool NotEqual(object other)
+        protected override bool LessThan(int input)
         {
-            return Input != (int)other;
+            return input < Other;
+        }
+
+        protected override bool LessThanEqual(int input)
+        {
+            return input <= Other;
+        }
+
+        protected override bool NotEqual(int input)
+        {
+            return input != Other;
         }
     }
 }

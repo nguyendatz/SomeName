@@ -8,14 +8,26 @@ namespace SomeName.Validator
 {
     public class DateTimeRangeValidator : RangeValidator<DateTime>
     {
+        private string errorMessage = "datetime range error ";
+
         public DateTimeRangeValidator(DateTime min, DateTime max) : base(min, max)
         {
 
         }
 
-        protected override bool Compare(object input)
+        public DateTimeRangeValidator(DateTime min, DateTime max, IValidator<DateTime> validator) : base(min, max, validator)
         {
-            return Min <= (DateTime)input && (DateTime)input < Max;
+
+        }
+
+        protected override bool Compare(DateTime input)
+        {
+            return Min <= input && input < Max;
+        }
+
+        protected override string GetErrorMessage()
+        {
+            return errorMessage;
         }
     }
 }

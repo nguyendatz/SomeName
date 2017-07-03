@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using SomeName;
 using SomeName.Util;
+using SomeName.Validator;
 
 namespace SomeNameSample
 {
@@ -23,25 +24,13 @@ namespace SomeNameSample
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            var m = new Model();
+            var m = new User();
 
             // Get data
-            m.FullName = txtFullName.Text;
             m.Username = txtUsername.Text;
-            m.Email = txtEmail.Text;
-            m.Password = txtPassword.Text;
-            m.ConfirmPassword = txtConfirmPassword.Text;
 
-            Validator validator = new Validator();
-
-            lb_ValidationResult.Text = "";
-            if (showDefaultChecked) validator = new Validator();
-            else validator = new MyValidator(lb_ValidationResult);
-            
-            if (validator.IsValid(m))
-            {
-                // Do somethings
-            }
+            IValidator<User> validator = new ModelValidator<User>();
+            validator.IsValid(m);
         }
 
         public static bool EmailExists(object input, object[] Params)

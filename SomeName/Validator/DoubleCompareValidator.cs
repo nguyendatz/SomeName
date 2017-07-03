@@ -9,38 +9,51 @@ namespace SomeName.Validator
 {
     public class DoubleCompareValidator : CompareValidator<double>
     {
-        public DoubleCompareValidator(object input, Comparison CType): base((double)input, CType)
+        private string errorMessage = "Double compare failed.";
+
+        public DoubleCompareValidator(double other, Comparison CType): base(other, CType)
         {
         }
 
-        protected override bool Equal(object other)
+        public DoubleCompareValidator(double other, Comparison CType, IValidator<double> validator) : base(other, CType, validator)
         {
-            return Input == (double)other;
         }
 
-        protected override bool GreaterThan(object other)
+        protected override bool Equal(double input)
         {
-            return Input > (double)other;
+            return input == Other;
         }
 
-        protected override bool GreaterThanEqual(object other)
+        protected override string GetErrorMessage()
         {
-            return Input >= (double)other;
+            return errorMessage;
         }
 
-        protected override bool LessThan(object other)
+        protected override bool GreaterThan(double input)
         {
-            return Input < (double)other;
+            return input > Other;
         }
 
-        protected override bool LessThanEqual(object other)
+        protected override bool GreaterThanEqual(double input)
         {
-            return Input <= (double)other;
+            return input >= Other;
         }
 
-        protected override bool NotEqual(object other)
+        protected override bool LessThan(double input)
         {
-            return Input != (double)other;
+            return input < Other;
         }
+
+        protected override bool LessThanEqual(double input)
+        {
+            return input <= Other;
+        }
+
+        protected override bool NotEqual(double input)
+        {
+            return input != Other;
+        }
+
+        
     }
 }

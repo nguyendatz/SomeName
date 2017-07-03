@@ -1,0 +1,3 @@
+﻿RangeValidatior, CompareValidator : template method
+CompareValidatorFactory: simple factory
+decorator

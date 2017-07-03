@@ -10,14 +10,7 @@ namespace SomeName.Annotation
 {
     public class CompareAttribute : SomeNameAttribute
     {
-        public string CompareTo { get; set; }
+        public object CompareTo { get; set; }
         public Comparison ComparisonType { get; set; }
-        public DataType Type { get; set; }
-
-        public override bool IsValid(object[] Input)
-        {
-            IValidator cv = CompareValidatorFactory.Create<string>((string)Input[0], ComparisonType, Type);
-            return cv.IsValid((string)Input[1]);
-        }
     }
 }

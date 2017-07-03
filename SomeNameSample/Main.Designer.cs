@@ -1,4 +1,6 @@
-﻿namespace SomeNameSample
+﻿using System;
+
+namespace SomeNameSample
 {
     partial class Main
     {

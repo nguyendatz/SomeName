@@ -70,7 +70,9 @@
     <Compile Include="Validator\ValidatorDecorator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagramV1.cd" />
+    <None Include="ClassDiagramV1.cd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="TextFile1.txt" />

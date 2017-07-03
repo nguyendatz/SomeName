@@ -1,4 +1,5 @@
-﻿using SomeName.Util;
+﻿using SomeName.Processor;
+using SomeName.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,21 +8,21 @@ using System.Threading.Tasks;
 
 namespace SomeName.Validator
 {
-    public abstract class CompareValidator<T> : IValidator
+    public abstract class CompareValidator<TValue> : ValidatorDecorator<TValue>
     {
-        private T _Input;
+        private TValue _other;
         private Comparison _cType;
 
-        public T Input
+        public TValue Other
         {
             get
             {
-                return _Input;
+                return _other;
             }
 
             set
             {
-                _Input = value;
+                _other = value;
             }
         }
 
@@ -38,38 +39,61 @@ namespace SomeName.Validator
             }
         }
 
-        protected CompareValidator(T input, Comparison CType)
+        protected CompareValidator(TValue other, Comparison CType)
         {
-            _Input = input;
+            _other = other;
             _cType = CType;
         }
 
-        public override bool IsValid<type>(type other)
+        protected CompareValidator(TValue other, Comparison CType, IValidator<TValue> validator) : base(validator)
         {
-            switch(CType)
-            {
-                case Comparison.Equal:
-                    return this.Equal(other);
-                case Comparison.GreaterThan:
-                    return this.GreaterThan(other);
-                case Comparison.GreaterThanEqual:
-                    return this.GreaterThanEqual(other);
-                case Comparison.LessThan:
-                    return this.LessThan(other);
-                case Comparison.LessThanEqual:
-                    return this.LessThanEqual(other);
-                case Comparison.NotEqual:
-                    return this.NotEqual(other);
-                default:
-                    return false;
-            }
+            _other = other;
+            _cType = CType;
         }
 
-        abstract protected bool Equal(object other);
-        abstract protected bool GreaterThan(object other);
-        abstract protected bool GreaterThanEqual(object other);
-        abstract protected bool LessThan(object other);
-        abstract protected bool LessThanEqual(object other);
-        abstract protected bool NotEqual(object other);
+        public override bool IsValid(TValue input, Context context)
+        {
+            context.AddErrorMessage(GetErrorMessage());
+            return this.IsValid(input);
+        }
+
+        public override bool IsValid(TValue input)
+        {
+            bool valid;
+            switch (CType)
+            {
+                case Comparison.Equal:
+                    valid = this.Equal(input);
+                    break;
+                case Comparison.GreaterThan:
+                    valid = this.GreaterThan(input);
+                    break;
+                case Comparison.GreaterThanEqual:
+                    valid = this.GreaterThanEqual(input);
+                    break;
+                case Comparison.LessThan:
+                    valid = this.LessThan(input);
+                    break;
+                case Comparison.LessThanEqual:
+                    valid = this.LessThanEqual(input);
+                    break;
+                case Comparison.NotEqual:
+                    valid = this.NotEqual(input);
+                    break;
+                default:
+                    valid = false;
+                    break;
+            }
+            return valid && validator.IsValid(input);
+        }
+
+
+        abstract protected bool Equal(TValue input);
+        abstract protected bool GreaterThan(TValue input);
+        abstract protected bool GreaterThanEqual(TValue input);
+        abstract protected bool LessThan(TValue input);
+        abstract protected bool LessThanEqual(TValue input);
+        abstract protected bool NotEqual(TValue input);
+        abstract protected string GetErrorMessage();
     }
 }

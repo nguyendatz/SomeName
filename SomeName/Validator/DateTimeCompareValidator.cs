@@ -7,40 +7,51 @@ using System.Threading.Tasks;
 
 namespace SomeName.Validator
 {
-    class DateTimeCompareValidator : CompareValidator<DateTime>
+    public class DateTimeCompareValidator : CompareValidator<DateTime>
     {
-        public DateTimeCompareValidator(object input, Comparison CType): base((DateTime)input, CType)
+        private string errorMessage = "Datetime compare error";
+
+        public DateTimeCompareValidator(DateTime other, Comparison CType): base(other, CType)
         {
         }
 
-        protected override bool Equal(object other)
+        public DateTimeCompareValidator(DateTime other, Comparison CType, IValidator<DateTime> validator) : base(other, CType, validator)
         {
-            return Input == (DateTime)other;
         }
 
-        protected override bool GreaterThan(object other)
+        protected override bool Equal(DateTime input)
         {
-            return Input > (DateTime)other;
+            return input == Other;
         }
 
-        protected override bool GreaterThanEqual(object other)
+        protected override bool GreaterThan(DateTime input)
         {
-            return Input >= (DateTime)other;
+            return input > Other;
         }
 
-        protected override bool LessThan(object other)
+        protected override bool GreaterThanEqual(DateTime input)
         {
-            return Input < (DateTime)other;
+            return input >= Other;
         }
 
-        protected override bool LessThanEqual(object other)
+        protected override bool LessThan(DateTime input)
         {
-            return Input <= (DateTime)other;
+            return input < Other;
         }
 
-        protected override bool NotEqual(object other)
+        protected override bool LessThanEqual(DateTime input)
         {
-            return Input != (DateTime)other;
+            return input <= Other;
+        }
+
+        protected override bool NotEqual(DateTime input)
+        {
+            return input != Other;
+        }
+
+        protected override string GetErrorMessage()
+        {
+            return errorMessage;
         }
     }
 }
