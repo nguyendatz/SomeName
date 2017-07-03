@@ -12,7 +12,7 @@ namespace SomeName
 
         public object[] Params { get; set; }
 
-        public override bool IsValid(object[] input)
+        public override void IsValid(object[] input)
         {
             var res = false;
             try
@@ -29,7 +29,7 @@ namespace SomeName
 
             }
 
-            return res;
+            //return res;
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using SomeName;
+using System.Collections.Generic;
 
 namespace SomeNameSample
 {
@@ -31,16 +32,33 @@ namespace SomeNameSample
             m.Password = txtPassword.Text;
             m.ConfirmPassword = txtConfirmPassword.Text;
 
-            Validator validator = new Validator();
+            Validator validator;
 
             lb_ValidationResult.Text = "";
-            if (showDefaultChecked) validator = new Validator();
-            else validator = new MyValidator(lb_ValidationResult);
-            
+            if (showDefaultChecked)
+                validator = new Validator();
+            else
+                validator = new MyValidator(lb_ValidationResult);
+
             if (validator.IsValid(m))
             {
                 // Do somethings
             }
+
+            //Dictionary<string, List<string>> Data = new Dictionary<string, List<string>>();
+
+            //Data.Add("Test1", new List<string>());
+            //Data["Test1"].Add("Error1");
+            //Data["Test1"].Add("Error2");
+            //Data["Test1"].Add("Error3");
+
+            //Data.Add("Test2", new List<string>());
+            //Data["Test2"].Add("Error1");
+            //Data["Test2"].Add("Error2");
+            //Data["Test2"].Add("Error3");
+
+            //ShowFormat f = new ShowFile("TestLog.txt");
+            //f.Show(Data);
         }
 
         public static bool EmailExists(object input, object[] Params)

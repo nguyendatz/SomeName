@@ -8,6 +8,10 @@ namespace SomeName
 {
     class AndValidationGroup : ValidationGroup
     {
+        public AndValidationGroup(string name) : base(name)
+        {
+        }
+
         public override bool isValid()
         {
             bool result = _list[0].isValid();

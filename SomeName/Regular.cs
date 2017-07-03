@@ -6,9 +6,9 @@ namespace SomeName
     {
         public string Pattern { get; set; }
 
-        public override bool IsValid(object[] input)
+        public override void IsValid(object[] input)
         {
-            return Regex.IsMatch(input[0].ToString(), Pattern.ToString());
+            //return Regex.IsMatch(input[0].ToString(), Pattern.ToString());
         }
     }
 }

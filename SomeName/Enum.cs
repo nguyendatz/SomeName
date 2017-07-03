@@ -23,4 +23,10 @@
         Char,
         DateTime
     }
+
+    public enum GroupType
+    {
+        And,
+        Or
+    }
 }

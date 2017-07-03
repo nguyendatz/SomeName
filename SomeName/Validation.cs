@@ -13,11 +13,13 @@ namespace SomeName
         public void attach(ValidationGroup vg)
         {
             _ValidationGroupList.Add(vg);
+            vg.add(this);
         }
 
         public void detach(ValidationGroup vg)
         {
             _ValidationGroupList.Remove(vg);
+            vg.remove(this);
         }
 
         abstract public bool isValid();

@@ -8,9 +8,24 @@ namespace SomeName
 {
     abstract public class ValidationGroup
     {
+        private string _Name;
+
         protected List<Validation> _list;
 
-        public ValidationGroup()
+        public string Name
+        {
+            get
+            {
+                return _Name;
+            }
+
+            set
+            {
+                _Name = value;
+            }
+        }
+
+        public ValidationGroup(string name)
         {
             _list = new List<Validation>();
         }

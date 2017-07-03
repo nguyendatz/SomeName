@@ -12,10 +12,10 @@ namespace SomeName
         public Comparison ComparisonType { get; set; }
         public DataType Type { get; set; }
 
-        public override bool IsValid(object[] Input)
+        public override void IsValid(object[] Input)
         {
             Validation cv = CompareValidation.Create(Input[0], Input[1], ComparisonType, Type);
-            return cv.isValid();
+            //return cv.isValid();
         }
     }
 }

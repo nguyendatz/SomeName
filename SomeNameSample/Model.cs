@@ -17,11 +17,11 @@ namespace SomeNameSample
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Password is required!")]
-        [MinLength(Length = 6, ErrorMessage ="Password's length must more than 6")]
-        [MaxLength(Length = 50, ErrorMessage = "Password's length must less than 50")]
         public string Password { get; set; }
 
         [Compare(CompareTo = "Password", ComparisonType = Comparison.Equal, Type = DataType.String, ErrorMessage = "Confirm Password must same to Password")]
         public string ConfirmPassword { get; set; }
+
+        public string ID;
     }
 }

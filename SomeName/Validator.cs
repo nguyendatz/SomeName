@@ -33,7 +33,7 @@ namespace SomeName
                 var atts = a.GetCustomAttributes(typeof(SomeName), true);
                 var rlt = true;
 
-                foreach (SomeName att in atts)
+                /*foreach (SomeName att in atts)
                 {
                     if (att.ToString() == "SomeName.CompareAttribute")
                     {
@@ -55,8 +55,10 @@ namespace SomeName
                         res.Error.Add(a.Name, err);
                         break;
                     }
-                }
+                }*/
             }
+
+
 
             if (res.Error.Count > 0) res.IsValid = false;
 
