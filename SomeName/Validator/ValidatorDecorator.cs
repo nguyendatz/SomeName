@@ -18,7 +18,7 @@ namespace SomeName.Validator
             this.validator = validator;
         }
 
-        public abstract bool IsValid(TValue input, Context context);
+        public abstract bool IsValid(TValue input, Context context, string propName);
 
         public abstract bool IsValid(TValue input);
     }

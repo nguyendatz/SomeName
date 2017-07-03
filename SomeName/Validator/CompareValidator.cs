@@ -51,13 +51,34 @@ namespace SomeName.Validator
             _cType = CType;
         }
 
-        public override bool IsValid(TValue input, Context context)
+        public override bool IsValid(TValue input, Context context, string propName)
         {
-            context.AddErrorMessage(GetErrorMessage());
-            return this.IsValid(input);
+            bool valid = Check(input);
+
+            if (!valid)
+            {
+                context.AddError(propName, GetErrorMessage());
+            }
+
+            if (validator != null)
+            {
+                return valid && validator.IsValid(input, context, propName);
+            }
+
+            return valid;
         }
 
         public override bool IsValid(TValue input)
+        {
+            bool valid = Check(input);
+            if (validator != null)
+            {
+                return valid && validator.IsValid(input);
+            }
+            return valid;
+        }
+
+        private bool Check(TValue input)
         {
             bool valid;
             switch (CType)
@@ -84,9 +105,8 @@ namespace SomeName.Validator
                     valid = false;
                     break;
             }
-            return valid && validator.IsValid(input);
+            return valid;
         }
-
 
         abstract protected bool Equal(TValue input);
         abstract protected bool GreaterThan(TValue input);

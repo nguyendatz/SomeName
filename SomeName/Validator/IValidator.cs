@@ -9,7 +9,7 @@ namespace SomeName.Validator
 {
     public interface IValidator<TValue>
     {
-        bool IsValid(TValue input, Context context);
+        bool IsValid(TValue input, Context context, string propName);
         bool IsValid(TValue input);
     }
 }

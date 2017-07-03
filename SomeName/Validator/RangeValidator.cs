@@ -27,13 +27,26 @@ namespace SomeName.Validator
 
         public override bool IsValid(TValue input)
         {
-            return Compare(input) && validator.IsValid(input);
+            if (validator != null)
+            {
+                return Compare(input) && validator.IsValid(input);
+            }
+            return Compare(input);
         }
 
-        public override bool IsValid(TValue input, Context context)
+        public override bool IsValid(TValue input, Context context, string propName)
         {
-            context.AddErrorMessage(GetErrorMessage());
-            return this.IsValid(input);
+            if (!Compare(input))
+            {
+                context.AddError(propName, GetErrorMessage());
+            }
+
+            if (validator != null)
+            {
+                return Compare(input) && validator.IsValid(input, context, propName);
+            }
+
+            return Compare(input);
         }
 
         protected abstract bool Compare(TValue input);

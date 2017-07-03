@@ -47,6 +47,9 @@
     <Compile Include="Processor\Context.cs" />
     <Compile Include="Processor\DefaultProcessor.cs" />
     <Compile Include="Processor\IProcessor.cs" />
+    <Compile Include="Processor\ShowFile.cs" />
+    <Compile Include="Processor\ShowFormat.cs" />
+    <Compile Include="Processor\ShowMsgBox.cs" />
     <Compile Include="Validator\CompareValidator.cs" />
     <Compile Include="Validator\CompareValidatorFactory.cs" />
     <Compile Include="Validator\DateTimeCompareValidator.cs" />
@@ -59,12 +62,15 @@
     <Compile Include="Validator\IntegerRangeValidator.cs" />
     <Compile Include="Validator\IValidator.cs" />
     <Compile Include="Processor\AnnotationProcessor.cs" />
+    <Compile Include="Validator\MaxLengthValidator.cs" />
+    <Compile Include="Validator\MinLengthValidator.cs" />
     <Compile Include="Validator\RangeValidator.cs" />
     <Compile Include="Annotation\RequiredAttribute.cs" />
-    <Compile Include="Annotation\RegularAttribute.cs" />
+    <Compile Include="Annotation\RegexAttribute.cs" />
     <Compile Include="Annotation\SomeNameAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationResult.cs" />
+    <Compile Include="Validator\RegexValidator.cs" />
     <Compile Include="Validator\RequiredValidator.cs" />
     <Compile Include="Validator\StringCompareValidator.cs" />
     <Compile Include="Validator\ValidatorDecorator.cs" />

@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace SomeName.Processor
 {
-     public interface IProcessor
+    public interface IProcessor
     {
-        ValidationResult Result();
-
-        IProcessor DoValidate();
-       
-        IProcessor On<TValue>(TValue value, IValidator<TValue> validator);
+        Context Result();
     }
 }

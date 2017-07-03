@@ -11,20 +11,15 @@ namespace SomeName.Processor
     {
         private Context context = new Context();
 
-        public IProcessor DoValidate()
+        public DefaultProcessor On<TValue>(TValue value, IValidator<TValue> validator, string propName = "prop")
         {
+            validator.IsValid(value, context, propName);
             return this;
         }
 
-        public IProcessor On<TValue>(TValue value, IValidator<TValue> validator)
+        public Context Result()
         {
-            validator.IsValid(value, context);
-            return this;
-        }
-
-        public ValidationResult Result()
-        {
-            throw new NotImplementedException();
+            return context;
         }
     }
 }
