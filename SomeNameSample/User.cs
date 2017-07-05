@@ -1,6 +1,7 @@
 ﻿using SomeName;
 using SomeName.Util;
 using SomeName.Annotation;
+using System;
 
 namespace SomeNameSample
 {
@@ -24,5 +25,9 @@ namespace SomeNameSample
 
         [Required(Message = "Confirm password is required.")]
         public string ConfirmPassword { get; set; }
+
+        [Range(DataType = DataType.DateTime, Minimum = "1/1/1995", Maximum = "1/1/2010",
+            Message ="Date of birth must between '1/1/1995' - '1/1/2010'")]
+        public DateTime DOB { get; set; }
     }
 }

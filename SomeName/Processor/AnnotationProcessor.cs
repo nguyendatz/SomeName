@@ -46,6 +46,12 @@ namespace SomeName.Processor
                         case "CompareAttribute":
                             ValidateComparision(attr, propName, propValue);
                             break;
+                        case "RangeAttribute":
+                            ValidateRange(attr, propName, propValue);
+                            break;
+                        case "StringLengthAttribute":
+                            ValidateStringLength(attr, propName, propValue);
+                            break;
                     }
                 }
             }
@@ -151,5 +157,72 @@ namespace SomeName.Processor
                 }
             }
         }
+
+        private void ValidateStringLength(SomeNameAttribute attr, string name, object value)
+        {
+            StringLengthAttribute stringLengthAttribute = (StringLengthAttribute)attr;
+            int minLength = stringLengthAttribute.MinimumLength;
+            int maxLength = stringLengthAttribute.MaximumLength;
+            string strValue = (string)Convert.ChangeType(value, typeof(string));
+
+            MinLengthValidator v1 = new MinLengthValidator(minLength);
+            if (!v1.IsValid(strValue))
+            {
+                context.AddError(name, attr.Message);
+            }
+
+            MaxLengthValidator v2 = new MaxLengthValidator(maxLength);
+            if (!v2.IsValid(strValue))
+            {
+                context.AddError(name, attr.Message);
+            }
+        }
+
+        private void ValidateRange(SomeNameAttribute attr, string name, object value)
+        {
+            RangeAttribute rangeAttribute = (RangeAttribute)attr;
+            object min = rangeAttribute.Minimum;
+            object max = rangeAttribute.Maximum;
+            DataType dataType = rangeAttribute.DataType;
+
+            string strValue = (string)Convert.ChangeType(value, typeof(string));
+
+
+            if (dataType == DataType.Integer)
+            {
+                int intValue = (int)Convert.ChangeType(value, typeof(int));
+                int intMin = (int)Convert.ChangeType(min, typeof(int));
+                int intMax = (int)Convert.ChangeType(max, typeof(int));
+                IntegerRangeValidator v = new IntegerRangeValidator(intMin, intMax);
+                if (!v.IsValid(intValue))
+                {
+                    context.AddError(name, attr.Message);
+                }
+            }
+            else if (dataType == DataType.Double)
+            {
+                double doubleValue = (double)Convert.ChangeType(value, typeof(double));
+                double doubleMin = (double)Convert.ChangeType(min, typeof(double));
+                double doubleMax = (double)Convert.ChangeType(max, typeof(double));
+                DoubleRangeValidator v = new DoubleRangeValidator(doubleMin, doubleMax);
+                if (!v.IsValid(doubleValue))
+                {
+                    context.AddError(name, attr.Message);
+                }
+            }
+            else if (dataType == DataType.DateTime)
+            {
+                DateTime dValue = (DateTime)Convert.ChangeType(value, typeof(DateTime));
+                DateTime dMin = (DateTime)Convert.ChangeType(min, typeof(DateTime));
+                DateTime dMax = (DateTime)Convert.ChangeType(max, typeof(DateTime));
+
+                DateTimeRangeValidator v = new DateTimeRangeValidator(dMin, dMax);
+                if (!v.IsValid(dValue))
+                {
+                    context.AddError(name, attr.Message);
+                }
+            }
+        }
+
     }
 }

@@ -33,6 +33,7 @@ namespace SomeNameSample
             m.Email = txtEmail.Text;
             m.Password = txtPassword.Text;
             m.ConfirmPassword = txtConfirmPassword.Text;
+            m.DOB = dateTimePicker_DOB.Value;
 
             // uncomment each block of code to view result
 

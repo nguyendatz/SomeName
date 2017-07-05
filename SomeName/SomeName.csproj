@@ -44,6 +44,8 @@
     <Compile Include="Annotation\MaxLengthAttribute.cs" />
     <Compile Include="Annotation\MinLengthAttribute.cs" />
     <Compile Include="Annotation\CompareAttribute.cs" />
+    <Compile Include="Annotation\RangeAttribute.cs" />
+    <Compile Include="Annotation\StringLengthAttribute.cs" />
     <Compile Include="Processor\Context.cs" />
     <Compile Include="Processor\DefaultProcessor.cs" />
     <Compile Include="Processor\IProcessor.cs" />

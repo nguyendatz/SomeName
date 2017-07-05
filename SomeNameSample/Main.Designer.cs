@@ -44,15 +44,17 @@ namespace SomeNameSample
             this.label8 = new System.Windows.Forms.Label();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rb_ShowDefault = new System.Windows.Forms.RadioButton();
-            this.rb_ShowCustom = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.rb_ShowCustom = new System.Windows.Forms.RadioButton();
+            this.rb_ShowDefault = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePicker_DOB = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(263, 248);
+            this.btnSubmit.Location = new System.Drawing.Point(263, 298);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 0;
@@ -163,22 +165,19 @@ namespace SomeNameSample
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.rb_ShowCustom);
             this.panel1.Controls.Add(this.rb_ShowDefault);
-            this.panel1.Location = new System.Drawing.Point(58, 196);
+            this.panel1.Location = new System.Drawing.Point(58, 238);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(485, 26);
             this.panel1.TabIndex = 17;
             // 
-            // rb_ShowDefault
+            // label3
             // 
-            this.rb_ShowDefault.AutoSize = true;
-            this.rb_ShowDefault.Location = new System.Drawing.Point(159, 6);
-            this.rb_ShowDefault.Name = "rb_ShowDefault";
-            this.rb_ShowDefault.Size = new System.Drawing.Size(59, 17);
-            this.rb_ShowDefault.TabIndex = 0;
-            this.rb_ShowDefault.TabStop = true;
-            this.rb_ShowDefault.Text = "Default";
-            this.rb_ShowDefault.UseVisualStyleBackColor = true;
-            this.rb_ShowDefault.CheckedChanged += new System.EventHandler(this.rb_ShowDefault_CheckedChanged);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(145, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Way to show validation result";
             // 
             // rb_ShowCustom
             // 
@@ -192,20 +191,41 @@ namespace SomeNameSample
             this.rb_ShowCustom.UseVisualStyleBackColor = true;
             this.rb_ShowCustom.CheckedChanged += new System.EventHandler(this.rb_ShowCustom_CheckedChanged);
             // 
-            // label3
+            // rb_ShowDefault
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Way to show validation result";
+            this.rb_ShowDefault.AutoSize = true;
+            this.rb_ShowDefault.Location = new System.Drawing.Point(159, 6);
+            this.rb_ShowDefault.Name = "rb_ShowDefault";
+            this.rb_ShowDefault.Size = new System.Drawing.Size(59, 17);
+            this.rb_ShowDefault.TabIndex = 0;
+            this.rb_ShowDefault.TabStop = true;
+            this.rb_ShowDefault.Text = "Default";
+            this.rb_ShowDefault.UseVisualStyleBackColor = true;
+            this.rb_ShowDefault.CheckedChanged += new System.EventHandler(this.rb_ShowDefault_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(55, 202);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 13);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Date of birth";
+            // 
+            // dateTimePicker_DOB
+            // 
+            this.dateTimePicker_DOB.Location = new System.Drawing.Point(166, 196);
+            this.dateTimePicker_DOB.Name = "dateTimePicker_DOB";
+            this.dateTimePicker_DOB.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker_DOB.TabIndex = 19;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 283);
+            this.ClientSize = new System.Drawing.Size(602, 333);
+            this.Controls.Add(this.dateTimePicker_DOB);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.label8);
@@ -249,6 +269,8 @@ namespace SomeNameSample
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton rb_ShowCustom;
         private System.Windows.Forms.RadioButton rb_ShowDefault;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_DOB;
     }
 }
 
