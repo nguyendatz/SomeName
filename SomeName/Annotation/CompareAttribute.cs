@@ -10,7 +10,7 @@ namespace SomeName.Annotation
 {
     public class CompareAttribute : SomeNameAttribute
     {
-        public object CompareTo { get; set; }
+        public string CompareTo { get; set; }
         public Comparison ComparisonType { get; set; }
     }
 }

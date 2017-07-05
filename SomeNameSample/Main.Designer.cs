@@ -45,8 +45,8 @@ namespace SomeNameSample
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.rb_ShowCustom = new System.Windows.Forms.RadioButton();
-            this.rb_ShowDefault = new System.Windows.Forms.RadioButton();
+            this.rb_ShowLogFile = new System.Windows.Forms.RadioButton();
+            this.rb_ShowMsgBox = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker_DOB = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
@@ -163,8 +163,8 @@ namespace SomeNameSample
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.rb_ShowCustom);
-            this.panel1.Controls.Add(this.rb_ShowDefault);
+            this.panel1.Controls.Add(this.rb_ShowLogFile);
+            this.panel1.Controls.Add(this.rb_ShowMsgBox);
             this.panel1.Location = new System.Drawing.Point(58, 238);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(485, 26);
@@ -179,29 +179,29 @@ namespace SomeNameSample
             this.label3.TabIndex = 2;
             this.label3.Text = "Way to show validation result";
             // 
-            // rb_ShowCustom
+            // rb_ShowLogFile
             // 
-            this.rb_ShowCustom.AutoSize = true;
-            this.rb_ShowCustom.Location = new System.Drawing.Point(270, 6);
-            this.rb_ShowCustom.Name = "rb_ShowCustom";
-            this.rb_ShowCustom.Size = new System.Drawing.Size(60, 17);
-            this.rb_ShowCustom.TabIndex = 1;
-            this.rb_ShowCustom.TabStop = true;
-            this.rb_ShowCustom.Text = "Custom";
-            this.rb_ShowCustom.UseVisualStyleBackColor = true;
-            this.rb_ShowCustom.CheckedChanged += new System.EventHandler(this.rb_ShowCustom_CheckedChanged);
+            this.rb_ShowLogFile.AutoSize = true;
+            this.rb_ShowLogFile.Location = new System.Drawing.Point(270, 6);
+            this.rb_ShowLogFile.Name = "rb_ShowLogFile";
+            this.rb_ShowLogFile.Size = new System.Drawing.Size(62, 17);
+            this.rb_ShowLogFile.TabIndex = 1;
+            this.rb_ShowLogFile.TabStop = true;
+            this.rb_ShowLogFile.Text = "Log File";
+            this.rb_ShowLogFile.UseVisualStyleBackColor = true;
+            this.rb_ShowLogFile.CheckedChanged += new System.EventHandler(this.rb_ShowCustom_CheckedChanged);
             // 
-            // rb_ShowDefault
+            // rb_ShowMsgBox
             // 
-            this.rb_ShowDefault.AutoSize = true;
-            this.rb_ShowDefault.Location = new System.Drawing.Point(159, 6);
-            this.rb_ShowDefault.Name = "rb_ShowDefault";
-            this.rb_ShowDefault.Size = new System.Drawing.Size(59, 17);
-            this.rb_ShowDefault.TabIndex = 0;
-            this.rb_ShowDefault.TabStop = true;
-            this.rb_ShowDefault.Text = "Default";
-            this.rb_ShowDefault.UseVisualStyleBackColor = true;
-            this.rb_ShowDefault.CheckedChanged += new System.EventHandler(this.rb_ShowDefault_CheckedChanged);
+            this.rb_ShowMsgBox.AutoSize = true;
+            this.rb_ShowMsgBox.Location = new System.Drawing.Point(159, 6);
+            this.rb_ShowMsgBox.Name = "rb_ShowMsgBox";
+            this.rb_ShowMsgBox.Size = new System.Drawing.Size(65, 17);
+            this.rb_ShowMsgBox.TabIndex = 0;
+            this.rb_ShowMsgBox.TabStop = true;
+            this.rb_ShowMsgBox.Text = "Msg box";
+            this.rb_ShowMsgBox.UseVisualStyleBackColor = true;
+            this.rb_ShowMsgBox.CheckedChanged += new System.EventHandler(this.rb_ShowDefault_CheckedChanged);
             // 
             // label6
             // 
@@ -267,8 +267,8 @@ namespace SomeNameSample
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton rb_ShowCustom;
-        private System.Windows.Forms.RadioButton rb_ShowDefault;
+        private System.Windows.Forms.RadioButton rb_ShowLogFile;
+        private System.Windows.Forms.RadioButton rb_ShowMsgBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker_DOB;
     }

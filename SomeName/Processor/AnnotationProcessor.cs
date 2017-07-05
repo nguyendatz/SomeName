@@ -44,7 +44,19 @@ namespace SomeName.Processor
                             ValidateRegex(attr, propName, propValue);
                             break;
                         case "CompareAttribute":
-                            ValidateComparision(attr, propName, propValue);
+                            CompareAttribute compareAttribute = (CompareAttribute)attr;
+                            string compareTo = compareAttribute.CompareTo;
+                            object otherValue = null;
+                            foreach (var other in properties)
+                            {   
+                                if (other.Name == compareTo)
+                                {
+                                    otherValue = other.GetValue(value, null);
+                                    break;
+                                }
+                            }
+
+                                ValidateComparision(attr, propName, propValue, otherValue);
                             break;
                         case "RangeAttribute":
                             ValidateRange(attr, propName, propValue);
@@ -77,9 +89,11 @@ namespace SomeName.Processor
         {
             MinLengthAttribute minLengthAttribute = (MinLengthAttribute)attr;
             int minLength = minLengthAttribute.Length;
-            MinLengthValidator v = new MinLengthValidator(minLength);
             string strValue = (string)Convert.ChangeType(value, typeof(string));
-            if (!v.IsValid(strValue))
+
+            ValidatorDecorator<int> v = new IntegerCompareValidator(minLength, Comparison.GreaterThanEqual);
+
+            if (!v.IsValid(strValue.Length))
             {
                 context.AddError(name, attr.Message);
             }
@@ -89,9 +103,11 @@ namespace SomeName.Processor
         {
             MaxLengthAttribute maxLengthAttribute = (MaxLengthAttribute)attr;
             int maxLength = maxLengthAttribute.Length;
-            MaxLengthValidator v = new MaxLengthValidator(maxLength);
             string strValue = (string)Convert.ChangeType(value, typeof(string));
-            if (!v.IsValid(strValue))
+
+            ValidatorDecorator<int> v = new IntegerCompareValidator(maxLength, Comparison.LessThanEqual);
+
+            if (!v.IsValid(strValue.Length))
             {
                 context.AddError(name, attr.Message);
             }
@@ -109,17 +125,15 @@ namespace SomeName.Processor
             }
         }
 
-        private void ValidateComparision(SomeNameAttribute attr, string name, object value)
+        private void ValidateComparision(SomeNameAttribute attr, string name, object value, object otherValue)
         {
             CompareAttribute compareAttribute = (CompareAttribute)attr;
-
-            object compareTo = compareAttribute.CompareTo;
             Comparison cType = compareAttribute.ComparisonType;
 
             if (value.GetType().Equals(typeof(string)))
             {
                 string strValue = (string)Convert.ChangeType(value, typeof(string));
-                string other = (string)Convert.ChangeType(compareTo, typeof(string));
+                string other = (string)Convert.ChangeType(otherValue, typeof(string));
                 StringCompareValidator v = new StringCompareValidator(other, cType);
                 if (!v.IsValid(strValue))
                 {
@@ -129,7 +143,7 @@ namespace SomeName.Processor
             else if (value.GetType().Equals(typeof(int)))
             {
                 int intValue = (int)Convert.ChangeType(value, typeof(int));
-                int other = (int)Convert.ChangeType(compareTo, typeof(int));
+                int other = (int)Convert.ChangeType(otherValue, typeof(int));
                 IntegerCompareValidator v = new IntegerCompareValidator(other, cType);
                 if (!v.IsValid(intValue))
                 {
@@ -139,7 +153,7 @@ namespace SomeName.Processor
             else if (value.GetType().Equals(typeof(double)))
             {
                 double doubleValue = (double)Convert.ChangeType(value, typeof(double));
-                double other = (double)Convert.ChangeType(compareTo, typeof(double));
+                double other = (double)Convert.ChangeType(otherValue, typeof(double));
                 DoubleCompareValidator v = new DoubleCompareValidator(other, cType);
                 if (!v.IsValid(doubleValue))
                 {
@@ -149,7 +163,7 @@ namespace SomeName.Processor
             else if (value.GetType().Equals(typeof(DateTime)))
             {
                 DateTime dateTimeValue = (DateTime)Convert.ChangeType(value, typeof(DateTime));
-                DateTime other = (DateTime)Convert.ChangeType(compareTo, typeof(DateTime));
+                DateTime other = (DateTime)Convert.ChangeType(otherValue, typeof(DateTime));
                 DateTimeCompareValidator v = new DateTimeCompareValidator(other, cType);
                 if (!v.IsValid(dateTimeValue))
                 {
@@ -165,14 +179,8 @@ namespace SomeName.Processor
             int maxLength = stringLengthAttribute.MaximumLength;
             string strValue = (string)Convert.ChangeType(value, typeof(string));
 
-            MinLengthValidator v1 = new MinLengthValidator(minLength);
-            if (!v1.IsValid(strValue))
-            {
-                context.AddError(name, attr.Message);
-            }
-
-            MaxLengthValidator v2 = new MaxLengthValidator(maxLength);
-            if (!v2.IsValid(strValue))
+            ValidatorDecorator<int> v = new IntegerRangeValidator(minLength, maxLength + 1);
+            if (!v.IsValid(strValue.Length))
             {
                 context.AddError(name, attr.Message);
             }

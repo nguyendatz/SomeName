@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="SomeName.Annotation.CompareAttribute">
+    <Position X="1" Y="2.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Annotation\CompareAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Annotation.MaxLengthAttribute">
+    <Position X="4.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Annotation\MaxLengthAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Annotation.MinLengthAttribute">
+    <Position X="10.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Annotation\MinLengthAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Annotation.RangeAttribute">
+    <Position X="13.5" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAACAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Annotation\RangeAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Annotation.RegexAttribute">
+    <Position X="16.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Annotation\RegexAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Annotation.RequiredAttribute">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Annotation\RequiredAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Annotation.SomeNameAttribute">
+    <Position X="10" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Annotation\SomeNameAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Annotation.StringLengthAttribute">
+    <Position X="7.5" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Annotation\StringLengthAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Processor.AnnotationProcessor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAgAAgIAAAAAAAAAAQAAAAAAIAAAgAAABAAAIA=</HashCode>
+      <FileName>Processor\AnnotationProcessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SomeName.Processor.Context" Collapsed="true">
+    <Position X="23" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAAAAAAAABAAQAAAAABAAAAAQIAAAAAAAgAAA=</HashCode>
+      <FileName>Processor\Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Processor.DefaultProcessor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Processor\DefaultProcessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SomeName.Processor.ShowFile">
+    <Position X="7" Y="7.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Processor\ShowFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Processor.ShowFormat">
+    <Position X="9" Y="5.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processor\ShowFormat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Processor.ShowMsgBox">
+    <Position X="11.25" Y="7.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processor\ShowMsgBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Validator.CompareValidator&lt;TValue&gt;">
+    <Position X="10.25" Y="16.75" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>BCAAIAgAgAAAAAIAwIgAAAAAAAAAAAAAAAAAAAQAASA=</HashCode>
+      <FileName>Validator\CompareValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Validator.CompareValidatorFactory" Collapsed="true">
+    <Position X="24.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validator\CompareValidatorFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Validator.DateTimeCompareValidator">
+    <Position X="6.5" Y="22" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAEAgAAAAAAAgIAAAAAAAAAAAAAAAAAAAAQAASA=</HashCode>
+      <FileName>Validator\DateTimeCompareValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Validator.DateTimeRangeValidator">
+    <Position X="22.25" Y="17.75" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAQA=</HashCode>
+      <FileName>Validator\DateTimeRangeValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Validator.DoubleCompareValidator">
+    <Position X="19.75" Y="22" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAEAgAAAAAAAgIAAAAAAAAAAAAAAAAAAAAQAASA=</HashCode>
+      <FileName>Validator\DoubleCompareValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Validator.DoubleRangeValidator">
+    <Position X="28.75" Y="17.75" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAQA=</HashCode>
+      <FileName>Validator\DoubleRangeValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Validator.IntegerCompareValidator">
+    <Position X="0.5" Y="22" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAEAgAAAAAAAgIAAAAAAAAAAAAAAAAAAAAQAASA=</HashCode>
+      <FileName>Validator\IntegerCompareValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Validator.IntegerRangeValidator">
+    <Position X="17.25" Y="17.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAQA=</HashCode>
+      <FileName>Validator\IntegerRangeValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Validator.RangeValidator&lt;TValue&gt;">
+    <Position X="23" Y="14.25" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAEAgAAAAAAAAAAAAAAABAAAAAAQA=</HashCode>
+      <FileName>Validator\RangeValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Validator.RegexValidator">
+    <Position X="0.5" Y="13.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validator\RegexValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Validator.RequiredValidator&lt;TValue&gt;">
+    <Position X="5.25" Y="13.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAkAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validator\RequiredValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Validator.StringCompareValidator">
+    <Position X="13.5" Y="22" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAEAgAAAAAAAgIAAAAAAAAAAAAAAAAAAAAQAASA=</HashCode>
+      <FileName>Validator\StringCompareValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomeName.Validator.ValidatorDecorator&lt;TValue&gt;">
+    <Position X="15.5" Y="9.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Validator\ValidatorDecorator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="SomeName.Processor.IProcessor" Collapsed="true">
+    <Position X="23" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processor\IProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SomeName.Validator.IValidator&lt;TValue&gt;" Collapsed="true">
+    <Position X="24.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validator\IValidator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SomeName.Util.MessageType" Collapsed="true">
+    <Position X="23" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Util\Enum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SomeName.Util.Comparison" Collapsed="true">
+    <Position X="23" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAgAAAAAAAgIAAAAAAAAAAAAAAAAAAAAQAACA=</HashCode>
+      <FileName>Util\Enum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SomeName.Util.DataType" Collapsed="true">
+    <Position X="24.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAACAiQAAAAAAAAAAAA=</HashCode>
+      <FileName>Util\Enum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

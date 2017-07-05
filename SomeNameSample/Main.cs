@@ -9,14 +9,16 @@ namespace SomeNameSample
 {
     public partial class Main : Form
     {
+        bool showMsgBox;
+        bool showLog;
+
         public Main()
         {
             InitializeComponent();
-            showDefaultChecked = true;
-            rb_ShowDefault.Checked = true;
+            showMsgBox = true;
+            showLog = false;
+            rb_ShowMsgBox.Checked = true;
         }
-        bool showDefaultChecked = true;
-
 
         private void Main_Load(object sender, EventArgs e)
         {
@@ -42,15 +44,22 @@ namespace SomeNameSample
             Context context = processor.On(m).Result();
             if (context.HasError())
             {
-                context.ShowError(new ShowMsgBox());
+                if (showMsgBox)
+                    context.ShowError(new ShowMsgBox());
+                else
+                    if (showLog)
+                    context.ShowError(new ShowFile("Log.txt"));
             }
 
-            // MANUAL VALIDATION
+            //MANUAL VALIDATION
             //DefaultProcessor defaultProcessor = new DefaultProcessor();
-            //Context manualValidationContext = defaultProcessor.On(m.Email, new RequiredValidator<string>(), "email")
-            //    .On(m.Email, new RegexValidator(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"), "email")
-            //    .On(m.Username, new MinLengthValidator(5), "username")
+            //Context manualValidationContext = defaultProcessor.On(m.Fullname, new RequiredValidator<string>(), "Full Name")
+            //    .On(m.Fullname, new RegexValidator(@"^(?=.*[A-Z]).+$"), "Full Name")
+            //    .On(m.Fullname, new StringCompareValidator("SomeName", Comparison.NotEqual), "Full Name")
             //    .Result();
+
+            //manualValidationContext.AddError("Fullname", "Some thing is not right with Full Name");
+
             //if (manualValidationContext.HasError())
             //{
             //    manualValidationContext.ShowError(new ShowMsgBox());
@@ -73,12 +82,14 @@ namespace SomeNameSample
 
         private void rb_ShowDefault_CheckedChanged(object sender, EventArgs e)
         {
-            showDefaultChecked = true;
+            showMsgBox = true;
+            showLog = false;
         }
 
         private void rb_ShowCustom_CheckedChanged(object sender, EventArgs e)
         {
-            showDefaultChecked = false;
+            showMsgBox = false;
+            showLog = true;
         }
     }
 }
